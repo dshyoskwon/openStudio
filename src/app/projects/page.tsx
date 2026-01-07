@@ -13,7 +13,7 @@ export default function ProjectsPage() {
           Projects
         </h1>
         <span className="text-sm text-gray-500">
-          Industry • Research • Incubating • Visualizing Senses
+          Industry • Research • Incubating
         </span>
       </header>
 
@@ -40,13 +40,6 @@ export default function ProjectsPage() {
           />
           Incubating
         </span>
-        <span className="inline-flex items-center gap-1 rounded-[2px] border border-purple-200 bg-purple-50 px-2 py-0.5 text-purple-700">
-          <span
-            className="w-2.5 h-2.5 rounded-[2px] bg-purple-500"
-            aria-hidden="true"
-          />
-          Visualizing Senses
-        </span>
       </div>
 
       {/* 바둑판 레이아웃: 타입 혼합 그리드 */}
@@ -57,9 +50,7 @@ export default function ProjectsPage() {
               ? "text-blue-500"
               : project.type === "Research Project"
               ? "text-emerald-500"
-              : project.type === "Incubating"
-              ? "text-amber-500"
-              : "text-purple-500";
+              : "text-amber-500";
 
           return (
             <Link
