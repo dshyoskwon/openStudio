@@ -1,4 +1,4 @@
-export type ProjectType = "Industry Project" | "Research Project" | "Incubating";
+export type ProjectType = "Industry Project" | "Research Project" | "Incubating" | "Visualizing Senses";
 
 export type Project = {
   id: string;
@@ -16,7 +16,7 @@ export const projects: Project[] = [
     meta: "2024 • Interaction Design",
     type: "Industry Project",
     description:
-      "도시 환경에서 시민들의 행동 패턴을 분석하여 실시간으로 형태가 변형되는 스마트 벤치 프로젝트.",
+      "AI를 활용한 적층 제조 공정 모니터링 소프트웨어의 사용자 인터페이스 및 경험 디자인 연구.",
   },
   {
     id: "smart-3d-printing-interface",
@@ -25,7 +25,7 @@ export const projects: Project[] = [
     meta: "2023 • UX·UI Design",
     type: "Industry Project",
     description:
-      "Designing user-friendly interfaces for industrial machines and equipment to enhance productivity and efficiency.",
+      "산업용 장비의 효율성과 생산성을 높이기 위한 사용자 친화적 인터페이스 디자인.",
   },
   {
     id: "savouring-slow-gifts",
@@ -53,11 +53,11 @@ export const projects: Project[] = [
   },
   {
     id: "visualizing-all-senses",
-    title: "언어의 시각화",
-    meta: "2025 • Internal Tool",
-    type: "Incubating",
+    title: "감각의 시각화",
+    meta: "2025 • Media Art & AI",
+    type: "Visualizing Senses",
     description:
-      "프로젝트 모집, 아카이빙, 참여자 매칭 등을 하나의 워크플로우로 통합하는 스튜디오 운영 시스템을 설계·개발하는 중입니다.",
+      "인간의 오감을 데이터화하여 시각적 예술로 재구성하는 실험적 프로젝트입니다. AI를 활용하여 소리, 촉각, 향기 등의 비시각적 요소를 역동적인 시각 매체로 변환합니다.",
   },
 ];
 

@@ -90,10 +90,10 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
                 height={720}
                 className="w-full h-full object-cover object-bottom"
               />
-            ) : project.id === "visualizing-all-senses" ? (
+            ) : project.id === "visualizing-words" ? (
               <Image
                 src="/images/projects/colour.jpg"
-                alt="Visualization of Senses"
+                alt="Visualization of Words"
                 width={1280}
                 height={720}
                 className="w-full h-full object-cover object-left"
