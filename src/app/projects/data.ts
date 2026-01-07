@@ -59,6 +59,30 @@ export const projects: Project[] = [
     description:
       "프로젝트 모집, 아카이빙, 참여자 매칭 등을 하나의 워크플로우로 통합하는 스튜디오 운영 시스템을 설계·개발하는 중입니다.",
   },
+  {
+    id: "digital-twin-city",
+    title: "Digital Twin City Interface",
+    meta: "2025 • Research",
+    type: "Research Project",
+    description:
+      "도시의 실시간 데이터를 가시화하고 제어할 수 있는 디지털 트윈 인터페이스 설계 연구입니다.",
+  },
+  {
+    id: "speculative-design-workshop",
+    title: "Speculative Design Workshop",
+    meta: "2024 • Education",
+    type: "Incubating",
+    description:
+      "미래 시나리오를 바탕으로 기술의 사회적 영향을 탐구하는 비판적 디자인 워크숍 시리즈입니다.",
+  },
+  {
+    id: "human-ai-collaboration",
+    title: "Human-AI Collaboration Tool",
+    meta: "2025 • AI Tool",
+    type: "Incubating",
+    description:
+      "디자이너와 AI가 협업하여 창의적인 아이디어를 발전시킬 수 있는 인터랙티브 툴킷을 개발합니다.",
+  },
 ];
 
 export function getProjectById(id: string): Project | undefined {

@@ -111,7 +111,7 @@ export default function ProjectsPage() {
                   <span>Project Image</span>
                 )}
               </div>
-              <h3 className="text-lg font-bold mb-1 group-hover:underline">
+              <h3 className="text-[4.5vw] md:text-[1.8vw] lg:text-[1.2vw] font-bold mb-1 group-hover:underline leading-tight min-h-[1.5em]">
                 {project.title}
               </h3>
               <div className="flex items-center justify-between text-xs text-gray-500 mb-2">
