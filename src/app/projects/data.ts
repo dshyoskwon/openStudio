@@ -53,7 +53,7 @@ export const projects: Project[] = [
   },
   {
     id: "visualizing-all-senses",
-    title: "감각의 시각화",
+    title: "언어의 시각화",
     meta: "2025 • Internal Tool",
     type: "Incubating",
     description:
