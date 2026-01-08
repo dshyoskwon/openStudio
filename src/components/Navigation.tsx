@@ -12,7 +12,10 @@ export default function Navigation() {
   return (
     <nav className="flex flex-col gap-6 text-sm font-medium tracking-wide">
       <div className="mb-8">
-        <Link href="/" className="text-lg font-bold uppercase tracking-wider">
+        <Link
+          href="/"
+          className="text-2xl md:text-3xl font-extrabold uppercase tracking-tight leading-snug"
+        >
           Open<br />Research<br />Studio
         </Link>
       </div>
