@@ -42,7 +42,7 @@ export default function ProjectsPage() {
         </span>
         <span className="inline-flex items-center gap-1 rounded-[2px] border border-purple-200 bg-purple-50 px-2 py-0.5 text-purple-700">
           <span
-            className="w-2.5 h-2.5 rounded-[2px] bg-purple-600"
+            className="w-2.5 h-2.5 rounded-full bg-purple-600"
             aria-hidden="true"
           />
           Student Project
@@ -133,8 +133,15 @@ export default function ProjectsPage() {
                 <div className="flex items-center gap-2">
                   <span>{project.meta}</span>
                   {project.isStudentProject && (
-                    <span className="inline-flex items-center rounded-[2px] border border-purple-200 bg-purple-50 px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-purple-700">
-                      Student Project
+                    <span
+                      className="inline-flex items-center"
+                      aria-label="Student project"
+                      title="Student project"
+                    >
+                      <span
+                        className="inline-block h-2 w-2 rounded-full bg-purple-600"
+                        aria-hidden="true"
+                      />
                     </span>
                   )}
                 </div>
