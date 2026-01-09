@@ -40,6 +40,13 @@ export default function ProjectsPage() {
           />
           Incubating
         </span>
+        <span className="inline-flex items-center gap-1 rounded-[2px] border border-purple-200 bg-purple-50 px-2 py-0.5 text-purple-700">
+          <span
+            className="w-2.5 h-2.5 rounded-[2px] bg-purple-600"
+            aria-hidden="true"
+          />
+          Student Project
+        </span>
       </div>
 
       {/* 바둑판 레이아웃: 타입 혼합 그리드 */}
@@ -123,7 +130,14 @@ export default function ProjectsPage() {
                 {project.title}
               </h3>
               <div className="flex items-center justify-between text-xs text-gray-500 mb-2">
-                <span>{project.meta}</span>
+                <div className="flex items-center gap-2">
+                  <span>{project.meta}</span>
+                  {project.isStudentProject && (
+                    <span className="inline-flex items-center rounded-[2px] border border-purple-200 bg-purple-50 px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-purple-700">
+                      Student Project
+                    </span>
+                  )}
+                </div>
                 <div className="flex items-center">
                   <span
                     className={`inline-flex p-1 ${colorClass}`}

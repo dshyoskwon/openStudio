@@ -6,6 +6,7 @@ export type Project = {
   meta: string;
   type: ProjectType;
   description: string;
+  isStudentProject?: boolean;
 };
 
 export const projects: Project[] = [
@@ -50,6 +51,7 @@ export const projects: Project[] = [
     type: "Incubating",
     description:
       "일상 사물을 위한 센싱·피드백 인터페이스 설계 및 프로토타이핑.",
+    isStudentProject: true,
   },
   {
     id: "visualizing-all-senses",
@@ -66,6 +68,7 @@ export const projects: Project[] = [
     type: "Research Project",
     description:
       "시각 장애인을 위한 새로운 형태의 햅틱 피드백 인터페이스 연구 및 프로토타이핑.",
+    isStudentProject: true,
   },
   {
     id: "speculative-design-workshop",
