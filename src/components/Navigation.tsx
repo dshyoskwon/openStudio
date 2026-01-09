@@ -9,6 +9,9 @@ const navItems = [
 ];
 
 export default function Navigation() {
+  const commitSha = process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_SHA;
+  const commitShort = commitSha ? commitSha.slice(0, 7) : null;
+
   return (
     <nav className="flex flex-col gap-6 text-sm font-medium tracking-wide">
       <div className="mb-8">
@@ -34,6 +37,7 @@ export default function Navigation() {
       
       <div className="mt-auto pt-10 text-xs text-gray-400">
         © 2024 ORS
+        {commitShort ? <span className="ml-2">({commitShort})</span> : null}
       </div>
     </nav>
   );
