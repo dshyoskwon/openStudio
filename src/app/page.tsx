@@ -1,4 +1,4 @@
-import Image from "next/image";
+import InteractiveDiagram from "@/components/InteractiveDiagram";
 
 export default function Home() {
   return (
@@ -20,17 +20,7 @@ export default function Home() {
 
         {/* 오른쪽: 다이어그램 이미지 영역 (남은 공간 모두 차지) */}
         <div className="flex-1 w-full">
-          {/* 이미지 비율에 맞춰 높이가 자동으로 결정되도록 변경 */}
-          <div className="w-full">
-            <Image 
-              src="/images/ors_diagram01.png" 
-              alt="Open Research Studio Process Diagram"
-              width={1600}
-              height={1200}
-              className="w-full h-auto object-contain object-center lg:object-left-top" // 왼쪽 상단 기준 정렬
-              priority
-            />
-          </div>
+          <InteractiveDiagram />
         </div>
 
       </div>
