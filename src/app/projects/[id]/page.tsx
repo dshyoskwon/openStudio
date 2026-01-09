@@ -90,13 +90,21 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
                 height={720}
                 className="w-full h-full object-cover object-bottom"
               />
-            ) : project.id === "visualizing-words" ? (
+            ) : project.id === "visualizing-all-senses" ? (
               <Image
                 src="/images/projects/colour.jpg"
-                alt="Visualization of Words"
+                alt="Visualization of Senses"
                 width={1280}
                 height={720}
                 className="w-full h-full object-cover object-left"
+              />
+            ) : project.id === "resonance-between-hearing-and-the-deaf" ? (
+              <Image
+                src="/images/projects/VibroCushion.png"
+                alt="Resonance between Hearing and the Deaf"
+                width={1280}
+                height={720}
+                className="w-full h-full object-cover object-bottom"
               />
             ) : (
               <span>Project Visual</span>

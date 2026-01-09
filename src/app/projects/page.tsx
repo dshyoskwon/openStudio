@@ -107,6 +107,14 @@ export default function ProjectsPage() {
                     height={720}
                     className="w-full h-full object-cover object-left"
                   />
+                ) : project.id === "resonance-between-hearing-and-the-deaf" ? (
+                  <Image
+                    src="/images/projects/VibroCushion.png"
+                    alt="Resonance between Hearing and the Deaf"
+                    width={1280}
+                    height={720}
+                    className="w-full h-full object-cover object-bottom"
+                  />
                 ) : (
                   <span>Project Image</span>
                 )}
