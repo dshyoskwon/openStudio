@@ -41,16 +41,10 @@ export default function ProjectsPage() {
           Incubating
         </span>
         <span className="inline-flex items-center gap-1 rounded-[2px] border border-purple-200 bg-purple-50 px-2 py-0.5 text-purple-700">
-          <span className="inline-flex p-0.5 text-purple-600" aria-hidden="true">
-            <svg
-              className="w-3 h-3"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M7 4C6.44772 4 6 4.44772 6 5V19.382C6 19.938 6.61396 20.2599 7.08179 19.9565L12 16.75L16.9182 19.9565C17.386 20.2599 18 19.938 18 19.382V5C18 4.44772 17.5523 4 17 4H7Z" />
-            </svg>
-          </span>
+          <span
+            className="w-2.5 h-2.5 rounded-[2px] bg-purple-600"
+            aria-hidden="true"
+          />
           Student Project
         </span>
       </div>
