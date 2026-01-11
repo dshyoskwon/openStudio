@@ -25,11 +25,11 @@ export const projects: Project[] = [
     id: "smart-3d-printing-interface",
     title:
       "Designing User Experience for Industrial Machines",
-    meta: "2024 • UX·UI Design",
+    meta: "2023 • UX·UI Design",
     type: "Industry Project",
     description:
       "Designing user-friendly interfaces for industrial machines and equipment to enhance productivity and efficiency.",
-    year: 2024,
+    year: 2023,
   },
   {
     id: "savouring-slow-gifts",
