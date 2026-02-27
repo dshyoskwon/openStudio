@@ -18,7 +18,7 @@ export const projects: Project[] = [
     meta: "2026 • HMI Design",
     type: "Industry Project",
     description:
-      "3D 프린터의 공정 및 모니터링 소프트웨어 디자인 및 사용자 경험 설계.",
+      "AI 융합 적층제조 공정 모니터링 소프트웨어 UX·UI 설계 및 디자인\n2025.09 ~ 2026.01",
     year: 2026,
   },
   {
