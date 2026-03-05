@@ -246,8 +246,8 @@ export default function AIAdditiveMfgContent() {
     <div className="space-y-10 mt-2">
       {/* Project overview */}
       <p className="text-sm leading-relaxed text-gray-700">
-        2025학년도 산학공동기술개발과제의 일환으로 국민대학교와 (주)에이엠솔루션즈의 공동 연구. 산업용 적층
-        제조 데이터 수집 및 활용을 위한 공정 모니터링 소프트웨어 <em>meltWatch</em>의 인터페이스 설계와
+        2025학년도 산학공동기술개발과제의 일환으로 국민대학교와 (주)에이엠솔루션즈의 공동 연구.<br></br> 
+        산업용 적층 제조 데이터 수집 및 활용을 위한 공정 모니터링 소프트웨어 <em>meltWatch</em>의 인터페이스 설계와
         사용자 경험(UI&thinsp;·&thinsp;UX) 디자인을 수행.
       </p>
 
