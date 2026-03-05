@@ -40,6 +40,14 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
             {project.title}
           </h1>
           <p className="text-sm text-gray-500 mt-1">{project.meta}</p>
+          {project.id === "ai-additive-manufacturing" && (
+            <div className="mt-3 text-xs text-gray-500 space-y-0.5">
+              <p><span className="font-semibold text-gray-700">PI:</span> Hyosun Kwon</p>
+              <p><span className="font-semibold text-gray-700">Research Assistants:</span> Junyong Lee, Beomseok Lee, Jiho Kang</p>
+              <p><span className="font-semibold text-gray-700">Duration:</span> 2025. 09. 01 – 2026. 01. 31</p>
+              <p><span className="font-semibold text-gray-700">Funded by</span> RISE · <span className="font-semibold text-gray-700">Supported by</span> 서울특별시</p>
+            </div>
+          )}
         </div>
         <span
           className={`inline-flex items-center rounded-[2px] border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${badgeClass}`}
