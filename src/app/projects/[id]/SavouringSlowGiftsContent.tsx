@@ -10,7 +10,7 @@ export default function SavouringSlowGiftsContent() {
       <section>
         <div className="bg-[#2e2e31] rounded-xl overflow-hidden w-full aspect-video flex items-center justify-center">
           <video
-            src="/images/projects/chi25-SlavouringSlowGifts4K.mp4"
+            src={`${IMG}/chi25-SlavouringSlowGifts.mp4`}
             controls
             className="w-full h-full object-contain"
           />
