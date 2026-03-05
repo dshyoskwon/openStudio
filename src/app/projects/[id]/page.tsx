@@ -114,6 +114,16 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
           </div>
           <div className="space-y-4 text-sm md:text-base leading-relaxed text-gray-800">
             <p className="whitespace-pre-line">{project.description}</p>
+            {project.id === "ai-additive-manufacturing" && (
+              <video
+                src="/images/projects/MeltWatch_UI_applied.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full rounded-sm"
+              />
+            )}
           </div>
         </div>
 
