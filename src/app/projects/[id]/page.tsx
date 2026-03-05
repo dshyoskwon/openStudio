@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getProjectById } from "../data";
+import AIAdditiveMfgContent from "./AIAdditiveMfgContent";
+import SavouringSlowGiftsContent from "./SavouringSlowGiftsContent";
 
 type ProjectPageProps = {
   params: {
@@ -124,12 +126,9 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
             )}
             {project.id === "ai-additive-manufacturing" && (
               <p>
-                2025학년도 산학공동기술개발과제의 일환으로 국민대학교와 (주)에이엠솔루션즈의 공동 연구산업용 적층 제조 데이터 수집 및 활용을 위한 공정 모니터링 소프트웨어 &lsquo;meltWatch&rsquo;의 인터페이스 설계와 사용자 경험(UI · UX) 디자인을 수행.
+                2025학년도 산학공동기술개발과제의 일환으로 국민대학교와 (주)에이엠솔루션즈의 공동 연구산업용 적층 제조 데이터 수집 및 활용을 위한 공정 모니터링 소프트웨어 &lsquo;meltWatch&rsquo;의 인터페이스 설계와 사용자 경험(UI · UX) 디자인을 수행하였다.
               </p>
             )}
-            <p className="text-gray-600">
-              
-            </p>
           </div>
 
           {project.id === "ai-additive-manufacturing" && (
@@ -204,6 +203,9 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
           </Link>
         </aside>
       </main>
+
+      {project.id === "ai-additive-manufacturing" && <AIAdditiveMfgContent />}
+      {project.id === "savouring-slow-gifts" && <SavouringSlowGiftsContent />}
     </div>
   );
 }
