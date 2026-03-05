@@ -4,7 +4,7 @@ export default function ParticipantsPage() {
   return (
     <div className="space-y-5 animate-in fade-in duration-500">
       <header className="border-b border-black pb-4">
-        <h1 className="text-3xl font-bold uppercase tracking-widest">Participants</h1>
+        <h1 className="text-3xl font-bold uppercase tracking-widest">Members</h1>
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
