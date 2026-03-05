@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getProjectById } from "../data";
+import AIAdditiveMfgContent from "./AIAdditiveMfgContent";
+import SavouringSlowGiftsContent from "./SavouringSlowGiftsContent";
 
 type ProjectPageProps = {
   params: {
@@ -112,11 +114,14 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
           </div>
           <div className="space-y-4 text-sm md:text-base leading-relaxed text-gray-800">
             <p>{project.description}</p>
-            <p className="text-gray-600">
-              이 페이지는 프로젝트별로 세부 설명, 프로세스 다이어그램, 산출물 이미지
-              등을 확장해서 넣을 수 있도록 구성되어 있습니다. 필요에 따라 섹션을
-              추가해 주세요.
-            </p>
+            {project.id !== "ai-additive-manufacturing" &&
+              project.id !== "savouring-slow-gifts" && (
+              <p className="text-gray-600">
+                이 페이지는 프로젝트별로 세부 설명, 프로세스 다이어그램, 산출물 이미지
+                등을 확장해서 넣을 수 있도록 구성되어 있습니다. 필요에 따라 섹션을
+                추가해 주세요.
+              </p>
+            )}
           </div>
         </div>
 
@@ -141,6 +146,9 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
           </Link>
         </aside>
       </main>
+
+      {project.id === "ai-additive-manufacturing" && <AIAdditiveMfgContent />}
+      {project.id === "savouring-slow-gifts" && <SavouringSlowGiftsContent />}
     </div>
   );
 }
