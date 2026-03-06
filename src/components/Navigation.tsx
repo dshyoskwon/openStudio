@@ -18,6 +18,9 @@ export default function Navigation() {
         >
           Open<br />Research<br />Studio
         </Link>
+        <p className="text-sm font-semibold uppercase tracking-wide text-purple-600 mt-1">
+          Open Research Lab
+        </p>
       </div>
       <ul className="flex flex-col gap-3">
         {navItems.map((item) => (
