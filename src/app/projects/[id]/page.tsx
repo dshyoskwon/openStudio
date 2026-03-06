@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { getProjectById } from "../data";
 import AIAdditiveMfgContent from "./AIAdditiveMfgContent";
 import SavouringSlowGiftsContent from "./SavouringSlowGiftsContent";
+import AmbientIntelligenceContent from "./AmbientIntelligenceContent";
 
 type ProjectPageProps = {
   params: {
@@ -176,6 +177,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
 
       {project.id === "ai-additive-manufacturing" && <AIAdditiveMfgContent />}
       {project.id === "savouring-slow-gifts" && <SavouringSlowGiftsContent />}
+      {project.id === "ambient-intelligence" && <AmbientIntelligenceContent />}
     </div>
   );
 }
