@@ -40,9 +40,9 @@ export default function Home() {
             rel="noopener noreferrer"
             className="flex flex-col gap-2 rounded-lg border border-black/10 px-4 py-5 text-left transition bg-[#f7f5ff] hover:border-black hover:bg-black hover:text-white"
           >
-            <span className="text-sm font-semibold uppercase tracking-wide">Apply My Project</span>
+            <span className="text-sm font-semibold uppercase tracking-wide">Apply for Lab</span>
             <p className="text-sm leading-relaxed">
-              자신의 아이디어나 진행 중인 프로젝트를 스튜디오 팀과 함께 확장하고 싶다면 이 링크를 통해 제안서를 제출하세요.
+              Open Research Lab에서 함께 연구하고 싶다면, 연구 주제와 계획을 담은 제안서를 이 링크를 통해 제출해 주세요.
             </p>
           </a>
           <a
