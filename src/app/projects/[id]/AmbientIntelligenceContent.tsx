@@ -101,6 +101,16 @@ export default function AmbientIntelligenceContent() {
           </div>
         </div>
       </section>
+
+      {/* 영상 */}
+      <video
+        src="/images/projects/ambientAgent/final.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="w-full rounded-sm"
+      />
     </div>
   );
 }
