@@ -146,28 +146,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
             )}
           </div>
           <div className="space-y-4 text-sm md:text-base leading-relaxed text-gray-800">
-            {project.id === "ambient-intelligence" ? (
-              <div className="flex gap-[2px] w-full">
-                <div className="relative flex-1 min-w-0">
-                  <Image
-                    src="/images/projects/ambientAgent/aA_01.jpg"
-                    alt="Ambient Agent 01"
-                    width={1280}
-                    height={960}
-                    className="w-full h-full object-cover rounded-sm"
-                  />
-                </div>
-                <div className="relative flex-1 min-w-0">
-                  <Image
-                    src="/images/projects/ambientAgent/aA_02.jpg"
-                    alt="Ambient Agent 02"
-                    width={1280}
-                    height={960}
-                    className="w-full h-full object-cover rounded-sm"
-                  />
-                </div>
-              </div>
-            ) : (
+            {project.id !== "ambient-intelligence" && (
               <p className="whitespace-pre-line">{project.description}</p>
             )}
             {project.id === "ai-additive-manufacturing" && (

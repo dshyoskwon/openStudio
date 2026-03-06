@@ -1,6 +1,30 @@
+import Image from "next/image";
+
 export default function AmbientIntelligenceContent() {
   return (
     <div className="space-y-10 mt-2">
+      {/* 이미지 두 장 나란히 */}
+      <div className="flex gap-[2px]">
+        <div className="relative flex-1 min-w-0">
+          <Image
+            src="/images/projects/ambientAgent/aA_01.jpg"
+            alt="Ambient Agent 01"
+            width={1280}
+            height={960}
+            className="w-full h-auto object-cover rounded-sm"
+          />
+        </div>
+        <div className="relative flex-1 min-w-0">
+          <Image
+            src="/images/projects/ambientAgent/aA_02.jpg"
+            alt="Ambient Agent 02"
+            width={1280}
+            height={960}
+            className="w-full h-auto object-cover rounded-sm"
+          />
+        </div>
+      </div>
+
       {/* 프로젝트 명 */}
       <section>
         <h2 className="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-2">
