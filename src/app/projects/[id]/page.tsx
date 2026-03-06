@@ -66,6 +66,13 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
               <p><span className="font-semibold text-gray-700">Funded by</span> National Research Foundation (NRF) · <span className="font-semibold text-gray-700">Supported by</span> 과학기술정보통신부</p>
             </div>
           )}
+          {project.id === "ambient-intelligence" && (
+            <div className="mt-3 text-xs text-gray-500 space-y-0.5">
+              <p className="text-gray-600">2025 국민대학교 알파 프로젝트</p>
+              <p><span className="font-semibold text-gray-700">참여학생:</span> 김지윤, 김지원, 남승현, 엄정우, 전다빈</p>
+              <p><span className="font-semibold text-gray-700">Duration:</span> 2025. 09. 01 – 2025. 12. 19</p>
+            </div>
+          )}
         </div>
         <span
           className={`inline-flex items-center rounded-[2px] border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${badgeClass}`}
