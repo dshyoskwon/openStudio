@@ -18,8 +18,8 @@ export default function Navigation() {
         >
           Open<br />Research<br />Studio
         </Link>
-        <p className="text-sm font-semibold uppercase tracking-wide text-purple-600 mt-1">
-          Open Research Lab
+        <p className="text-2xl md:text-3xl font-extrabold uppercase tracking-tight leading-snug text-purple-600 mt-1">
+          Open<br />Research<br />Lab
         </p>
       </div>
       <ul className="flex flex-col gap-3">
