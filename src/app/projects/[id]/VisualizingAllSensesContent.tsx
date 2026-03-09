@@ -30,7 +30,7 @@ export default function VisualizingAllSensesContent() {
           <strong> 2단계</strong>에서는 도출된 색채를 실제 브랜드 마케팅 시안에 적용하여 선호도를 비교·검증하였다.
         </p>
         <Image
-          src="/images/projects/colorStudy/fig1_research_process.jpg"
+          src="/images/projects/colorStudy/Figure1.png"
           alt="Research Process"
           width={1886}
           height={675}
@@ -49,7 +49,7 @@ export default function VisualizingAllSensesContent() {
           연상되는 색채를 자유롭게 선택하였다. 선택 이전에는 중립적인 회색(#e6e6e6)을 표시하여 편향을 최소화하였다.
         </p>
         <Image
-          src="/images/projects/colorStudy/fig2_calepathy_app.jpg"
+          src="/images/projects/colorStudy/Figure2.jpg"
           alt="Calepathy Webapp Screenshots"
           width={1886}
           height={768}
@@ -77,7 +77,7 @@ export default function VisualizingAllSensesContent() {
             &ldquo;청량한 하늘&rdquo;, &ldquo;시원한 바람&rdquo; 등의 연상이 주를 이루었다.
           </p>
           <Image
-            src="/images/projects/colorStudy/fig3_running.jpg"
+            src="/images/projects/colorStudy/Figure3_달리기.jpg"
             alt="Running: Treemap and HSV distribution"
             width={2020}
             height={1290}
@@ -93,7 +93,7 @@ export default function VisualizingAllSensesContent() {
             &ldquo;푸른 산&rdquo;, &ldquo;초록색 나무&rdquo; 등 자연 관련 연상이 두드러졌다.
           </p>
           <Image
-            src="/images/projects/colorStudy/fig4_climbing.jpg"
+            src="/images/projects/colorStudy/Figure4_등산.jpg"
             alt="Climbing: Treemap and HSV distribution"
             width={2020}
             height={1105}
@@ -110,7 +110,7 @@ export default function VisualizingAllSensesContent() {
             &ldquo;시원하다&rdquo;, &ldquo;개운함&rdquo; 등 감각적 연상이 주를 이루었다.
           </p>
           <Image
-            src="/images/projects/colorStudy/fig5_stretching.jpg"
+            src="/images/projects/colorStudy/Figure5_스트레칭.jpg"
             alt="Stretching: Treemap and HSV distribution"
             width={2020}
             height={1167}
@@ -126,7 +126,7 @@ export default function VisualizingAllSensesContent() {
             &ldquo;잔디&rdquo;, &ldquo;붉은악마&rdquo;, &ldquo;2002 월드컵&rdquo; 등의 연상이 나타났다.
           </p>
           <Image
-            src="/images/projects/colorStudy/fig6_football.jpg"
+            src="/images/projects/colorStudy/Figure6_축구.jpg"
             alt="Football: Treemap and HSV distribution"
             width={2020}
             height={952}
@@ -142,7 +142,7 @@ export default function VisualizingAllSensesContent() {
             &ldquo;쇠&rdquo;, &ldquo;덤벨&rdquo;, &ldquo;헬스장 기구&rdquo; 등 도구의 물성을 반영하는 색채 선택이 나타났다.
           </p>
           <Image
-            src="/images/projects/colorStudy/fig7_health.jpg"
+            src="/images/projects/colorStudy/Figure7_헬스.jpg"
             alt="Health: Treemap and HSV distribution"
             width={2020}
             height={1074}
