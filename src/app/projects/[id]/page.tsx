@@ -6,6 +6,7 @@ import AIAdditiveMfgContent from "./AIAdditiveMfgContent";
 import SavouringSlowGiftsContent from "./SavouringSlowGiftsContent";
 import AmbientIntelligenceContent from "./AmbientIntelligenceContent";
 import VisualizingAllSensesContent from "./VisualizingAllSensesContent";
+import ResonanceContent from "./ResonanceContent";
 
 type ProjectPageProps = {
   params: {
@@ -81,6 +82,12 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
               <p><span className="font-semibold text-gray-700">Duration:</span> 2024. 09. 01 – 2025. 06. 30</p>
             </div>
           )}
+          {project.id === "resonance-between-hearing-and-the-deaf" && (
+            <div className="mt-3 text-xs text-gray-500 space-y-0.5">
+              <p><span className="font-semibold text-gray-700">Authors:</span> Donghee Hyun, Dongheun Kang, Harim Choi, Hyosun Kwon</p>
+              <p><span className="font-semibold text-gray-700">Venue:</span> CHI EA &apos;25 (ACM CHI 2025 Extended Abstracts)</p>
+            </div>
+          )}
         </div>
         <span
           className={`inline-flex items-center rounded-[2px] border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${badgeClass}`}
@@ -143,11 +150,11 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
               />
             ) : project.id === "resonance-between-hearing-and-the-deaf" ? (
               <Image
-                src="/images/projects/VibroCushion.png"
+                src="/images/projects/VibroCushion/VibroCushion_4 (1).png"
                 alt="Resonance between Hearing and the Deaf"
                 width={1280}
                 height={720}
-                className="w-full h-full object-cover object-bottom"
+                className="w-full h-full object-cover object-center"
               />
             ) : (
               <span>Project Visual</span>
@@ -196,6 +203,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
       {project.id === "savouring-slow-gifts" && <SavouringSlowGiftsContent />}
       {project.id === "ambient-intelligence" && <AmbientIntelligenceContent />}
       {project.id === "visualizing-all-senses" && <VisualizingAllSensesContent />}
+      {project.id === "resonance-between-hearing-and-the-deaf" && <ResonanceContent />}
     </div>
   );
 }

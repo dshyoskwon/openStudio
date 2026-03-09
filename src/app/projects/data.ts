@@ -74,7 +74,7 @@ export const projects: Project[] = [
     meta: "2024 • Research",
     type: "Research Project",
     description:
-      "시각 장애인을 위한 새로운 형태의 햅틱 피드백 인터페이스 연구 및 프로토타이핑.",
+      "청각장애인과 청인의 포용적 마음챙김을 위한 진동촉각 시스템 VibroCushion의 디자인과 평가.",
     year: 2024,
     isStudentProject: true,
   },
