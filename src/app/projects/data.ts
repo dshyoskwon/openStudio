@@ -62,7 +62,7 @@ export const projects: Project[] = [
   {
     id: "visualizing-all-senses",
     title: "언어의 시각화",
-    meta: "2025 • Internal Tool",
+    meta: "2025 • Studio Project",
     type: "Research Project",
     description:
       "언어에 대한 사람들의 인식을 시각화하고 분석하여 언어의 의미를 이해합니다.",

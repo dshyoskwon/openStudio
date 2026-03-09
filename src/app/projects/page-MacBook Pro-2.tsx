@@ -213,7 +213,7 @@ export default function ProjectsPage() {
                 Studio Operating System
               </h3>
               <div className="flex items-center justify-between text-xs text-gray-500 mb-2">
-                <span>2025 • Internal Tool</span>
+                <span>2025 • Studio Project</span>
                 <div className="flex items-center">
                   <span className="inline-flex p-1 text-amber-500" aria-hidden="true">
                     <svg
