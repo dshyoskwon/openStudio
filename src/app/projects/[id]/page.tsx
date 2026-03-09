@@ -84,6 +84,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
           )}
           {project.id === "resonance-between-hearing-and-the-deaf" && (
             <div className="mt-3 text-xs text-gray-500 space-y-0.5">
+              <p className="text-gray-600">This research project was initially developed as a UG graduation project of the students.</p>
               <p><span className="font-semibold text-gray-700">Authors:</span> Donghee Hyun, Dongheun Kang, Harim Choi, Hyosun Kwon</p>
               <p><span className="font-semibold text-gray-700">Venue:</span> CHI EA &apos;25 (ACM CHI 2025 Extended Abstracts)</p>
             </div>
