@@ -150,7 +150,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
               />
             ) : project.id === "resonance-between-hearing-and-the-deaf" ? (
               <Image
-                src="/images/projects/VibroCushion/VibroCushion_4 (1).png"
+                src="/images/projects/VibroCushion/VibroCushion_hero.png"
                 alt="Resonance between Hearing and the Deaf"
                 width={1280}
                 height={720}
