@@ -74,6 +74,13 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
               <p><span className="font-semibold text-gray-700">Duration:</span> 2025. 09. 01 – 2025. 12. 19</p>
             </div>
           )}
+          {project.id === "visualizing-all-senses" && (
+            <div className="mt-3 text-xs text-gray-500 space-y-0.5">
+              <p className="text-gray-600">2024-2 국민대학교 TED 디자인 연구의 이해</p>
+              <p><span className="font-semibold text-gray-700">참여학생:</span> 이준용(1저자), 유환규(공동저자)</p>
+              <p><span className="font-semibold text-gray-700">Duration:</span> 2024. 09. 01 – 2025. 06. 30</p>
+            </div>
+          )}
         </div>
         <span
           className={`inline-flex items-center rounded-[2px] border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${badgeClass}`}
