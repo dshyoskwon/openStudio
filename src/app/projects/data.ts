@@ -71,11 +71,11 @@ export const projects: Project[] = [
   {
     id: "resonance-between-hearing-and-the-deaf",
     title: "Resonance between Hearing and the Deaf",
-    meta: "2024 • Research",
+    meta: "2025 • Research",
     type: "Research Project",
     description:
       "청각장애인과 청인의 포용적 마음챙김을 위한 진동촉각 시스템 VibroCushion의 디자인과 평가.",
-    year: 2024,
+    year: 2025,
     isStudentProject: true,
   },
   {
