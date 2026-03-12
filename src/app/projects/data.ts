@@ -84,7 +84,7 @@ export const projects: Project[] = [
     meta: "2026 • Research",
     type: "Incubating",
     description:
-      "미래 시나리오를 바탕으로 기술의 사회적 영향을 탐구하는 비판적 디자인 워크숍 시리즈입니다.",
+      "다양한 한글 자막 폰트가 유튜브 영상 시청에 어떻게 영향을 주는지 탐구합니다.",
     year: 2026,
   },
   {
