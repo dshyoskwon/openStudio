@@ -80,12 +80,12 @@ export const projects: Project[] = [
   },
   {
     id: "speculative-design-workshop",
-    title: "Speculative Design Workshop",
-    meta: "2024 • Education",
-    type: "Incubating",
+    title: "Korean Typefaces on Youtube Videos",
+    meta: "2026 • Research",
+    type: "Research Project",
     description:
       "미래 시나리오를 바탕으로 기술의 사회적 영향을 탐구하는 비판적 디자인 워크숍 시리즈입니다.",
-    year: 2024,
+    year: 2026,
   },
   {
     id: "human-ai-collaboration",
