@@ -134,6 +134,7 @@ export default function ProjectsPage() {
                   <span>{project.meta}</span>
                 </div>
                 <div className="flex items-center gap-1">
+                  {project.id !== "ambient-intelligence" && (
                   <span
                     className={`inline-flex p-1 ${colorClass}`}
                     aria-hidden="true"
@@ -150,6 +151,7 @@ export default function ProjectsPage() {
                       />
                     </svg>
                   </span>
+                  )}
                   {project.isStudentProject && (
                     <span
                       className="inline-flex p-1 text-purple-500"
