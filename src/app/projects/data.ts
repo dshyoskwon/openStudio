@@ -51,7 +51,7 @@ export const projects: Project[] = [
   },
   {
     id: "ambient-intelligence",
-    title: "Ambient Intelligence",
+    title: "Ambient Agents",
     meta: "2025 • KMU Alpha Project",
     type: "Incubating",
     description:
