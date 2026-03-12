@@ -54,7 +54,7 @@ export default function ParticipantsPage() {
               <p className="text-gray-600 text-lg">Co-Principal Investigator</p>
               <p className="text-sm text-gray-500">email@kookmin.ac.kr</p>
               <p className="text-sm text-gray-700 leading-relaxed">
-                Research Area
+                Visual Communication / Graphic Design / Colour / Visual Media
               </p>
             </div>
           </div>
