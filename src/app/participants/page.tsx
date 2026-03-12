@@ -48,8 +48,8 @@ export default function ParticipantsPage() {
             </div>
             <div className="text-center md:text-left max-w-2xl space-y-2">
               <div className="flex flex-col md:flex-row md:items-baseline md:gap-3">
-                <h3 className="text-xl md:text-xl font-bold leading-tight">Co-Director Name</h3>
-                <span className="text-base font-light text-gray-600">(Position)</span>
+                <h3 className="text-xl md:text-xl font-bold leading-tight">Jaehyuk Sung</h3>
+                <span className="text-base font-light text-gray-600">(Professor)</span>
               </div>
               <p className="text-gray-600 text-lg">Co-Principal Investigator</p>
               <p className="text-sm text-gray-500">email@kookmin.ac.kr</p>
