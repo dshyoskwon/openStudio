@@ -96,7 +96,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
           >
             {project.type}
           </span>
-          {project.id === "speculative-design-workshop" && (
+          {project.id === "korean-typefaces-on-youtube-videos" && (
             <span className="inline-flex items-center rounded-[2px] border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide bg-emerald-50 text-emerald-700 border-emerald-200">
               Research Project
             </span>

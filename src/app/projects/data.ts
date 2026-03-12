@@ -79,7 +79,7 @@ export const projects: Project[] = [
     isStudentProject: true,
   },
   {
-    id: "speculative-design-workshop",
+    id: "korean-typefaces-on-youtube-videos",
     title: "Korean Typefaces on Youtube Videos",
     meta: "2026 • Research",
     type: "Incubating",
