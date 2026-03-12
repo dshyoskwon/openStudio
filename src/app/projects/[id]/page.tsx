@@ -90,11 +90,18 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
             </div>
           )}
         </div>
-        <span
-          className={`inline-flex items-center rounded-[2px] border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${badgeClass}`}
-        >
-          {project.type}
-        </span>
+        <div className="flex flex-col gap-1 items-end">
+          <span
+            className={`inline-flex items-center rounded-[2px] border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${badgeClass}`}
+          >
+            {project.type}
+          </span>
+          {project.id === "speculative-design-workshop" && (
+            <span className="inline-flex items-center rounded-[2px] border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide bg-emerald-50 text-emerald-700 border-emerald-200">
+              Research Project
+            </span>
+          )}
+        </div>
       </header>
 
       <main className="grid grid-cols-1 lg:grid-cols-3 gap-10">
