@@ -38,6 +38,28 @@ export default function ParticipantsPage() {
           </div>
         </div>
 
+        {/* Co-Director */}
+        <div className="col-span-full mb-10">
+          <h2 className="text-sm font-bold uppercase tracking-wider text-gray-500 mb-6">
+            Co-Director
+          </h2>
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="relative w-[clamp(8rem,18vw,14rem)] h-[clamp(8rem,18vw,14rem)] rounded-full overflow-hidden bg-gray-200 flex-shrink-0 shadow-lg transition-all duration-300">
+            </div>
+            <div className="text-center md:text-left max-w-2xl space-y-2">
+              <div className="flex flex-col md:flex-row md:items-baseline md:gap-3">
+                <h3 className="text-xl md:text-xl font-bold leading-tight">Co-Director Name</h3>
+                <span className="text-base font-light text-gray-600">(Position)</span>
+              </div>
+              <p className="text-gray-600 text-lg">Co-Principal Investigator</p>
+              <p className="text-sm text-gray-500">email@kookmin.ac.kr</p>
+              <p className="text-sm text-gray-700 leading-relaxed">
+                Research Area
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Researchers */}
         <div className="col-span-full">
           <h2 className="text-sm font-bold uppercase tracking-wider text-gray-500 mb-6">
