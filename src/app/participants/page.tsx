@@ -96,18 +96,18 @@ export default function ParticipantsPage() {
               <p className="text-xs text-gray-500">Researcher / MA Student</p>
             </div>
 
-            {/* Third researcher: JH Kang */}
+            {/* Third researcher: SK Kim */}
             <div className="text-center md:text-left">
               <div className="w-full aspect-square mb-3 rounded-lg overflow-hidden bg-gray-100 grayscale hover:grayscale-0 transition-all">
                 <Image
-                  src="/images/participants/JHKang.jpg"
-                  alt="Portrait of JH Kang"
+                  src="/images/participants/SKKim.jpeg"
+                  alt="Portrait of SK Kim"
                   width={400}
                   height={400}
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="font-bold">Jihyo Kang</h3>
+              <h3 className="font-bold">Sungkyeong Kim</h3>
               <p className="text-xs text-gray-500">Researcher / MA Student</p>
             </div>
 
