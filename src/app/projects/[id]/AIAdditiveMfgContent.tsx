@@ -1,169 +1,58 @@
 import Image from "next/image";
-import type { CSSProperties } from "react";
 
-// ─── Figma MCP asset URLs (from design context of node 1581:2463) ─────────────
-// These expire after 7 days — export and replace with permanent paths.
-const A = {
-  greenCircle:      "https://www.figma.com/api/mcp/asset/82ffc6f1-e27c-4368-aa27-4ffa41e577d7",
-  pausedCircle:     "https://www.figma.com/api/mcp/asset/3912c12b-60af-462b-88d5-23cf9a1dea01",
-  optStopCircle:    "https://www.figma.com/api/mcp/asset/c3e6bf31-b73c-4d00-a361-6f49111a7fbb",
-  resumeCircle:     "https://www.figma.com/api/mcp/asset/adf97a27-0023-48e5-a767-0c302c40d3ed",
+// ─── State icons (inline SVG, no external assets) ────────────────────────────
 
-  maskPrintStart:   "https://www.figma.com/api/mcp/asset/036944be-1630-4dc8-972a-816c04dba8ca",
-  maskPrinting:     "https://www.figma.com/api/mcp/asset/3c5d7c74-b062-4203-a17b-d3b66ea8c9b8",
-  maskPaused:       "https://www.figma.com/api/mcp/asset/91462cae-6441-41c3-955b-928384578061",
-  maskOptStop:      "https://www.figma.com/api/mcp/asset/dfbf393d-c449-472b-a8e7-1c5d258cb408",
-
-  armLowerGreen:    "https://www.figma.com/api/mcp/asset/309a83b0-01de-4ff7-bb35-abfe75c9f9c0",
-  armUpperGreen:    "https://www.figma.com/api/mcp/asset/6b53cff6-fe3d-4c9c-90c5-74b20aec790f",
-  armLowerYellow:   "https://www.figma.com/api/mcp/asset/776323b2-e53d-4250-8bc2-3c9cbddba68c",
-  armUpperYellow:   "https://www.figma.com/api/mcp/asset/da30950d-4d79-42ad-bdd3-815f80269cdb",
-  armLowerPaused:   "https://www.figma.com/api/mcp/asset/2f65dfb6-8b0c-4339-b7d0-03a53baf788f",
-  armUpperPaused:   "https://www.figma.com/api/mcp/asset/31edc54b-8146-4762-8430-a7f26d3032eb",
-
-  indicatorGreen:   "https://www.figma.com/api/mcp/asset/56f8ff41-66b4-4a24-9eb5-22924bc0738f",
-  indicatorPaused:  "https://www.figma.com/api/mcp/asset/ca4a960f-e6df-462a-860e-3bb1c5d901a7",
-
-  nozzle:           "https://www.figma.com/api/mcp/asset/0f861b93-47ae-4327-992f-c47f3546c35a",
-  powderFeeder:     "https://www.figma.com/api/mcp/asset/e5342821-ede8-429b-a4f3-cc1d748aab9f",
-  shieldGas:        "https://www.figma.com/api/mcp/asset/96ff4659-56b4-4736-87d2-c4826d830d0e",
-  serviceVector:    "https://www.figma.com/api/mcp/asset/ac9a3e42-82cd-4ea0-b55a-05d7b5ebf69c",
-};
-
-// ─── CSS mask helper ──────────────────────────────────────────────────────────
-function maskStyle(img: string, pos: string, size: string): CSSProperties {
-  return {
-    maskImage: `url('${img}')`,
-    WebkitMaskImage: `url('${img}')`,
-    maskMode: "alpha",
-    maskComposite: "intersect",
-    maskRepeat: "no-repeat",
-    maskPosition: pos,
-    maskSize: size,
-  } as CSSProperties;
-}
-
-// ─── Masked robot arm layer ───────────────────────────────────────────────────
-function ArmLayer({
-  maskImg, contentImg, left, top, width, height,
-  maskPos, maskSize, inset, opacity,
-}: {
-  maskImg: string; contentImg: string;
-  left: number; top: number; width: number; height: number;
-  maskPos: string; maskSize: string; inset: string; opacity?: number;
-}) {
-  return (
-    <div
-      style={{
-        position: "absolute", left, top, width, height, opacity,
-        ...maskStyle(maskImg, maskPos, maskSize),
-      }}
-    >
-      <div style={{ position: "absolute", inset }}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={contentImg} alt="" style={{ display: "block", maxWidth: "none", width: "100%", height: "100%" }} />
-      </div>
-    </div>
-  );
-}
-
-// ─── State icons ──────────────────────────────────────────────────────────────
 function PrintStartIcon() {
   return (
-    <div style={{ position: "relative", width: 108, height: 108, flexShrink: 0 }}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={A.greenCircle} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }} />
-      <ArmLayer maskImg={A.maskPrintStart} contentImg={A.armLowerGreen}
-        left={4} top={60} width={101} height={26}
-        maskPos="-4px -60px" maskSize="108px 108px" inset="-7.69% -1.98%" />
-      <ArmLayer maskImg={A.maskPrintStart} contentImg={A.armUpperGreen}
-        left={-21} top={15} width={84.597} height={48.125}
-        maskPos="21px -15px" maskSize="108px 108px" inset="-4.16% -2.36%" />
+    <div className="w-[108px] h-[108px] shrink-0 rounded-full flex items-center justify-center" style={{ backgroundColor: "#0CB929" }}>
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="white">
+        <path d="M8 5v14l11-7z" />
+      </svg>
     </div>
   );
 }
 
 function PrintingIcon() {
   return (
-    <div style={{ position: "relative", width: 108, height: 108, flexShrink: 0 }}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={A.greenCircle} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }} />
-      {/* Indicator bar */}
-      <div style={{ position: "absolute", left: 31, top: 66.5, width: 44, height: 7.5 }}>
-        <div style={{ position: "absolute", inset: "-26.67% -4.55% -26.67% 0" }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={A.indicatorGreen} alt="" style={{ display: "block", width: "100%", height: "100%" }} />
-        </div>
+    <div className="w-[108px] h-[108px] shrink-0 rounded-full flex flex-col items-center justify-center gap-1" style={{ backgroundColor: "#0CB929" }}>
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="white">
+        <path d="M8 5v14l11-7z" />
+      </svg>
+      <div className="flex gap-0.5">
+        <div className="w-2 h-1 rounded-full bg-white" />
+        <div className="w-2 h-1 rounded-full bg-white" />
+        <div className="w-2 h-1 rounded-full bg-white" />
       </div>
-      <ArmLayer maskImg={A.maskPrinting} contentImg={A.armLowerGreen}
-        left={4} top={60} width={101} height={26}
-        maskPos="-4px -60px" maskSize="108px 108px" inset="-7.69% -1.98%" />
-      <ArmLayer maskImg={A.maskPrinting} contentImg={A.armUpperGreen}
-        left={-21} top={15} width={84.597} height={48.125}
-        maskPos="21px -15px" maskSize="108px 108px" inset="-4.16% -2.36%" />
     </div>
   );
 }
 
 function PausedIcon() {
   return (
-    <div style={{ position: "relative", width: 109, height: 109, flexShrink: 0 }}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={A.pausedCircle} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }} />
-      {/* Indicator */}
-      <div style={{ position: "absolute", left: 32.3, top: 74.04, width: 44.407, height: 8.074 }}>
-        <div style={{ position: "absolute", inset: "-24.77% -4.5% -24.77% 0" }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={A.indicatorPaused} alt="" style={{ display: "block", width: "100%", height: "100%" }} />
-        </div>
-      </div>
-      <ArmLayer maskImg={A.maskPaused} contentImg={A.armLowerPaused}
-        left={4.04} top={67.98} width={101.935} height={26.241}
-        maskPos="-4.037px -67.981px" maskSize="109px 109px" inset="-7.62% -1.96%"
-        opacity={0.55} />
-      <ArmLayer maskImg={A.maskPaused} contentImg={A.armUpperPaused}
-        left={-21.19} top={4.04} width={85.38} height={59.673}
-        maskPos="21.195px -4.039px" maskSize="109px 109px" inset="-3.35% -2.34%" />
-      {/* Pause bars */}
-      <div style={{ position: "absolute", left: 36.7, top: 30.97, width: 14.41, height: 51.136, backgroundColor: "white" }} />
-      <div style={{ position: "absolute", left: 57.89, top: 30.97, width: 14.41, height: 51.136, backgroundColor: "white" }} />
+    <div className="w-[108px] h-[108px] shrink-0 rounded-full flex items-center justify-center bg-gray-300">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="white">
+        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+      </svg>
     </div>
   );
 }
 
 function OptionalStopIcon() {
   return (
-    <div style={{ position: "relative", width: 108, height: 108, flexShrink: 0 }}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={A.optStopCircle} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }} />
-      {/* Indicator */}
-      <div style={{ position: "absolute", left: 31, top: 66.5, width: 44, height: 7.5 }}>
-        <div style={{ position: "absolute", inset: "-26.67% -4.55% -26.67% 0" }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={A.indicatorGreen} alt="" style={{ display: "block", width: "100%", height: "100%" }} />
-        </div>
-      </div>
-      <ArmLayer maskImg={A.maskOptStop} contentImg={A.armLowerYellow}
-        left={4} top={60} width={101} height={26}
-        maskPos="-4px -60px" maskSize="109px 109px" inset="-7.69% -1.98%" />
-      <ArmLayer maskImg={A.maskOptStop} contentImg={A.armUpperYellow}
-        left={-21} top={4} width={84.597} height={59.125}
-        maskPos="21px -4px" maskSize="109px 109px" inset="-3.38% -2.36%" />
+    <div className="w-[108px] h-[108px] shrink-0 rounded-full flex items-center justify-center" style={{ backgroundColor: "#F5A623" }}>
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="white">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-2h-2v2zm0-4h2V7h-2v6z" />
+      </svg>
     </div>
   );
 }
 
 function ResumeIcon() {
   return (
-    <div style={{ position: "relative", width: 108, height: 108, flexShrink: 0 }}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={A.resumeCircle} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }} />
-      <ArmLayer maskImg={A.maskPrintStart} contentImg={A.armLowerGreen}
-        left={4} top={60} width={101} height={26}
-        maskPos="-4px -60px" maskSize="108px 108px" inset="-7.69% -1.98%" />
-      <ArmLayer maskImg={A.maskPrintStart} contentImg={A.armUpperGreen}
-        left={-21} top={15} width={84.597} height={48.125}
-        maskPos="21px -15px" maskSize="108px 108px" inset="-4.16% -2.36%" />
+    <div className="w-[108px] h-[108px] shrink-0 rounded-full flex items-center justify-center" style={{ backgroundColor: "#4A90D9" }}>
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="white">
+        <path d="M8 5v14l11-7z" />
+      </svg>
     </div>
   );
 }
@@ -177,26 +66,53 @@ const STATE_ICONS = [
 ];
 
 // ─── Service panel ────────────────────────────────────────────────────────────
+function ServiceIcon({ name }: { name: string }) {
+  if (name === "Nozzle") {
+    return (
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#333" strokeWidth="1.5">
+        <path d="M18 4v20M12 24h12M14 28h8" strokeLinecap="round" />
+        <circle cx="18" cy="32" r="2" fill="#333" />
+      </svg>
+    );
+  }
+  if (name === "Powder Feeder") {
+    return (
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#333" strokeWidth="1.5">
+        <rect x="8" y="6" width="20" height="16" rx="2" />
+        <path d="M14 22v8M22 22v8M10 30h16" strokeLinecap="round" />
+      </svg>
+    );
+  }
+  return (
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#333" strokeWidth="1.5">
+      <circle cx="18" cy="18" r="12" />
+      <path d="M18 10v8M14 22h8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 const SERVICE_ITEMS = [
-  { name: "Nozzle", icon: A.nozzle, days: 4, hours: 23, replace: false },
-  { name: "Powder Feeder", icon: A.powderFeeder, days: 2, hours: 11, replace: false },
-  { name: "Shield Gas", icon: A.shieldGas, days: 2, hours: 11, replace: false },
+  { name: "Nozzle", days: 4, hours: 23, replace: false },
+  { name: "Powder Feeder", days: 2, hours: 11, replace: false },
+  { name: "Shield Gas", days: 2, hours: 11, replace: false },
 ];
 const SERVICE_ITEMS_REPLACE = [
-  { name: "Nozzle", icon: A.nozzle, days: 4, hours: 23, replace: false },
-  { name: "Powder Feeder", icon: A.powderFeeder, days: 2, hours: 11, replace: false },
-  { name: "Shield Gas", icon: A.shieldGas, days: 2, hours: 11, replace: true },
+  { name: "Nozzle", days: 4, hours: 23, replace: false },
+  { name: "Powder Feeder", days: 2, hours: 11, replace: false },
+  { name: "Shield Gas", days: 2, hours: 11, replace: true },
 ];
 
 function ServicePanel({
   items,
 }: {
-  items: { name: string; icon: string; days: number; hours: number; replace: boolean }[];
+  items: { name: string; days: number; hours: number; replace: boolean }[];
 }) {
   return (
     <div className="border border-gray-200 rounded-sm bg-white p-4 shadow-sm">
       <div className="flex items-center gap-2 mb-4 pb-3 border-b border-gray-100">
-        <Image src={A.serviceVector} alt="" width={18} height={14} unoptimized />
+        <svg width="18" height="14" viewBox="0 0 18 14" fill="none">
+          <path d="M1 7h16M9 1v12M5 3l-4 4 4 4M13 3l4 4-4 4" stroke="#333" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
         <span className="font-bold text-gray-900 text-sm">Service</span>
         <span className="ml-1 px-2 py-0.5 rounded-full text-white text-[10px] font-bold" style={{ backgroundColor: "#1EEBB8" }}>
           Edit
@@ -224,14 +140,7 @@ function ServicePanel({
                   <span className="text-xs text-gray-700 ml-0.5">hours</span>
                 </p>
               </div>
-              <Image
-                src={item.icon}
-                alt={item.name}
-                width={36}
-                height={36}
-                className="object-contain mt-1"
-                unoptimized
-              />
+              <ServiceIcon name={item.name} />
             </div>
           </div>
         ))}
@@ -246,7 +155,7 @@ export default function AIAdditiveMfgContent() {
     <div className="space-y-10 mt-2">
       {/* Project overview */}
       <p className="text-sm leading-relaxed text-gray-700">
-        2025학년도 산학공동기술개발과제의 일환으로 국민대학교와 (주)에이엠솔루션즈의 공동 연구.<br></br> 
+        2025학년도 산학공동기술개발과제의 일환으로 국민대학교와 (주)에이엠솔루션즈의 공동 연구.<br></br>
         산업용 적층 제조 데이터 수집 및 활용을 위한 공정 모니터링 소프트웨어 <em>meltWatch</em>의 인터페이스 설계와
         사용자 경험(UI&thinsp;·&thinsp;UX) 디자인을 수행.
       </p>
@@ -363,7 +272,7 @@ export default function AIAdditiveMfgContent() {
                   <div className="flex flex-col items-center gap-1">
                     <div className="w-[108px] h-[108px] rounded-full bg-red-600 flex items-center justify-center">
                       <svg viewBox="0 0 24 24" className="w-12 h-12 fill-white">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
+                        <rect x="6" y="6" width="12" height="12" rx="1" />
                       </svg>
                     </div>
                     <span className="text-xs text-gray-600">Stop</span>
