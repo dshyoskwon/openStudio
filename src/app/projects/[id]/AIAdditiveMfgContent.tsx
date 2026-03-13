@@ -15,7 +15,7 @@ export default function AIAdditiveMfgContent() {
       <section>
         <div className="rounded-sm overflow-hidden bg-gray-900">
           <Image
-            src="/images/projects/AM_UXUI.PNG"
+            src="/images/projects/meltWatch/meltWatch01.jpg"
             alt="meltWatch — Main Monitoring UI &amp; System Setting UI"
             width={1280}
             height={720}
