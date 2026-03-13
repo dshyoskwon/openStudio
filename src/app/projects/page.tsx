@@ -1,10 +1,66 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { projects } from "./data";
 
+type FilterType = "all" | "Industry Project" | "Research Project" | "Incubating" | "Student Project";
+
 export default function ProjectsPage() {
+  const [activeFilter, setActiveFilter] = useState<FilterType>("all");
+
   // 연도 기준 최신순으로 정렬
   const sortedProjects = [...projects].sort((a, b) => b.year - a.year);
+
+  // 필터링
+  const filteredProjects = sortedProjects.filter((project) => {
+    if (activeFilter === "all") return true;
+    if (activeFilter === "Student Project") return project.isStudentProject;
+    if (activeFilter === "Research Project") {
+      // Korean Typefaces는 Research Project 필터에도 포함
+      return project.type === "Research Project" || project.id === "korean-typefaces-on-youtube-videos";
+    }
+    return project.type === activeFilter;
+  });
+
+  const filters: { key: FilterType; label: string; dotClass: string; activeClass: string; inactiveClass: string }[] = [
+    {
+      key: "all",
+      label: "All",
+      dotClass: "bg-gray-600",
+      activeClass: "border-gray-400 bg-gray-100 text-gray-800",
+      inactiveClass: "border-gray-200 bg-white text-gray-400 hover:bg-gray-50",
+    },
+    {
+      key: "Industry Project",
+      label: "Industry Project",
+      dotClass: "bg-blue-600",
+      activeClass: "border-blue-200 bg-blue-50 text-blue-700",
+      inactiveClass: "border-gray-200 bg-white text-gray-400 hover:bg-blue-50/50",
+    },
+    {
+      key: "Research Project",
+      label: "Research Project",
+      dotClass: "bg-emerald-600",
+      activeClass: "border-emerald-200 bg-emerald-50 text-emerald-700",
+      inactiveClass: "border-gray-200 bg-white text-gray-400 hover:bg-emerald-50/50",
+    },
+    {
+      key: "Incubating",
+      label: "Incubating",
+      dotClass: "bg-amber-500",
+      activeClass: "border-amber-200 bg-amber-50 text-amber-700",
+      inactiveClass: "border-gray-200 bg-white text-gray-400 hover:bg-amber-50/50",
+    },
+    {
+      key: "Student Project",
+      label: "Student Project",
+      dotClass: "bg-purple-600",
+      activeClass: "border-purple-200 bg-purple-50 text-purple-700",
+      inactiveClass: "border-gray-200 bg-white text-gray-400 hover:bg-purple-50/50",
+    },
+  ];
 
   return (
     <div className="space-y-8 animate-in fade-in duration-500">
@@ -17,41 +73,28 @@ export default function ProjectsPage() {
         </span>
       </header>
 
-      {/* Type legend at top */}
+      {/* Type filter tags */}
       <div className="flex flex-wrap gap-2 text-[10px] font-semibold uppercase tracking-wide text-xs">
-        <span className="inline-flex items-center gap-1 rounded-[2px] border border-blue-200 bg-blue-50 px-2 py-0.5 text-blue-700">
-          <span
-            className="w-2.5 h-2.5 rounded-[2px] bg-blue-600"
-            aria-hidden="true"
-          />
-          Industry Project
-        </span>
-        <span className="inline-flex items-center gap-1 rounded-[2px] border border-emerald-200 bg-emerald-50 px-2 py-0.5 text-emerald-700">
-          <span
-            className="w-2.5 h-2.5 rounded-[2px] bg-emerald-600"
-            aria-hidden="true"
-          />
-          Research Project
-        </span>
-        <span className="inline-flex items-center gap-1 rounded-[2px] border border-amber-200 bg-amber-50 px-2 py-0.5 text-amber-700">
-          <span
-            className="w-2.5 h-2.5 rounded-[2px] bg-amber-500"
-            aria-hidden="true"
-          />
-          Incubating
-        </span>
-        <span className="inline-flex items-center gap-1 rounded-[2px] border border-purple-200 bg-purple-50 px-2 py-0.5 text-purple-700">
-          <span
-            className="w-2.5 h-2.5 rounded-[2px] bg-purple-600"
-            aria-hidden="true"
-          />
-          Student Project
-        </span>
+        {filters.map((f) => (
+          <button
+            key={f.key}
+            onClick={() => setActiveFilter(f.key)}
+            className={`inline-flex items-center gap-1 rounded-[2px] border px-2 py-0.5 cursor-pointer transition-all duration-200 ${
+              activeFilter === f.key ? f.activeClass : f.inactiveClass
+            }`}
+          >
+            <span
+              className={`w-2.5 h-2.5 rounded-[2px] ${f.dotClass} ${activeFilter === f.key ? "opacity-100" : "opacity-30"} transition-opacity`}
+              aria-hidden="true"
+            />
+            {f.label}
+          </button>
+        ))}
       </div>
 
       {/* 바둑판 레이아웃: 최신순 정렬 그리드 */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-        {sortedProjects.map((project) => {
+        {filteredProjects.map((project) => {
           const colorClass =
             project.type === "Industry Project"
               ? "text-blue-500"
@@ -200,5 +243,3 @@ export default function ProjectsPage() {
     </div>
   );
 }
-
-
