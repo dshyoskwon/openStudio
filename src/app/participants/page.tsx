@@ -8,54 +8,51 @@ export default function ParticipantsPage() {
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
-        {/* Director */}
+        {/* Directors */}
         <div className="col-span-full mb-10">
           <h2 className="text-sm font-bold uppercase tracking-wider text-gray-500 mb-6">
-            Director
+            Directors
           </h2>
-          <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="relative w-[clamp(8rem,18vw,14rem)] h-[clamp(8rem,18vw,14rem)] rounded-full overflow-hidden bg-gray-200 flex-shrink-0 shadow-lg transition-all duration-300">
-              <Image
-                src="/images/participants/profile_HyosK.jpg"
-                alt="Portrait of Director Hyosun Kwon"
-                fill
-                sizes="(max-width: 640px) 60vw, (max-width: 1024px) 35vw, 18vw"
-                className="object-cover"
-                priority
-              />
-            </div>
-            <div className="text-center md:text-left max-w-2xl space-y-2">
-              <div className="flex flex-col md:flex-row md:items-baseline md:gap-3">
-                <h3 className="text-xl md:text-xl font-bold leading-tight">Hyosun Kwon</h3>
-                <span className="text-base font-light text-gray-600">(Associate Professor)</span>
+          <div className="grid grid-cols-2 gap-10">
+            {/* Director */}
+            <div className="flex flex-col items-center md:items-start gap-4">
+              <div className="relative w-32 h-32 rounded-full overflow-hidden bg-gray-200 flex-shrink-0 shadow-lg">
+                <Image
+                  src="/images/participants/profile_HyosK.jpg"
+                  alt="Portrait of Director Hyosun Kwon"
+                  fill
+                  sizes="128px"
+                  className="object-cover"
+                  priority
+                />
               </div>
-              <p className="text-gray-600 text-lg">Principal Investigator</p>
-              <p className="text-sm text-gray-500">hyosun.kwon@kookmin.ac.kr</p>
-              <p className="text-sm text-gray-700 leading-relaxed">
-                Human-Computer Interaction / Human-Centered Design / Creative Technology / Studio Practice
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Co-Director */}
-        <div className="col-span-full mb-10">
-          <h2 className="text-sm font-bold uppercase tracking-wider text-gray-500 mb-6">
-            Co-Director
-          </h2>
-          <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="relative w-[clamp(8rem,18vw,14rem)] h-[clamp(8rem,18vw,14rem)] rounded-full overflow-hidden bg-gray-200 flex-shrink-0 shadow-lg transition-all duration-300">
-            </div>
-            <div className="text-center md:text-left max-w-2xl space-y-2">
-              <div className="flex flex-col md:flex-row md:items-baseline md:gap-3">
-                <h3 className="text-xl md:text-xl font-bold leading-tight">Jaehyuk Sung</h3>
-                <span className="text-base font-light text-gray-600">(Professor)</span>
+              <div className="text-center md:text-left space-y-1">
+                <div className="flex flex-col md:flex-row md:items-baseline md:gap-3">
+                  <h3 className="text-xl font-bold leading-tight">Hyosun Kwon</h3>
+                  <span className="text-base font-light text-gray-600">(Associate Professor)</span>
+                </div>
+                <p className="text-gray-600">Principal Investigator</p>
+                <p className="text-sm text-gray-500">hyosun.kwon@kookmin.ac.kr</p>
+                <p className="text-sm text-gray-700 leading-relaxed">
+                  Human-Computer Interaction / Human-Centered Design / Creative Technology / Studio Practice
+                </p>
               </div>
-              <p className="text-gray-600 text-lg">Co-Principal Investigator</p>
-              <p className="text-sm text-gray-500">email@kookmin.ac.kr</p>
-              <p className="text-sm text-gray-700 leading-relaxed">
-                Visual Communication / Graphic Design / Colour / Visual Media
-              </p>
+            </div>
+            {/* Co-Director */}
+            <div className="flex flex-col items-center md:items-start gap-4">
+              <div className="relative w-32 h-32 rounded-full overflow-hidden bg-gray-200 flex-shrink-0 shadow-lg">
+              </div>
+              <div className="text-center md:text-left space-y-1">
+                <div className="flex flex-col md:flex-row md:items-baseline md:gap-3">
+                  <h3 className="text-xl font-bold leading-tight">Jaehyuk Sung</h3>
+                  <span className="text-base font-light text-gray-600">(Professor)</span>
+                </div>
+                <p className="text-gray-600">Co-Principal Investigator</p>
+                <p className="text-sm text-gray-500">email@kookmin.ac.kr</p>
+                <p className="text-sm text-gray-700 leading-relaxed">
+                  Visual Communication / Graphic Design / Colour / Visual Media
+                </p>
+              </div>
             </div>
           </div>
         </div>
