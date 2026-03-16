@@ -155,7 +155,7 @@ export default function ParticipantsPage() {
                   />
                 </div>
                 <h3 className="font-bold">Beomseok Lee</h3>
-                <p className="text-xs text-gray-500">Researcher / MA Student</p>
+                <p className="text-xs text-gray-500">Researcher / Ph.D Student</p>
               </div>
             )}
 
