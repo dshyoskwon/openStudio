@@ -186,6 +186,22 @@ export default function ParticipantsPage() {
             ))}
           </div>
         </div>
+
+        {/* Undergraduate Intern */}
+        <div className="col-span-full">
+          <h2 className="text-sm font-bold uppercase tracking-wider text-gray-500 mb-6">
+            Undergraduate Intern
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {[1, 2, 3, 4, 5].map((i) => (
+              <div key={i} className="text-center md:text-left">
+                <div className="w-full aspect-square bg-gray-100 mb-3 rounded-lg grayscale hover:grayscale-0 transition-all" />
+                <h3 className="font-bold">Student Name</h3>
+                <p className="text-xs text-gray-500">Undergraduate Intern</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Apply CTA */}
