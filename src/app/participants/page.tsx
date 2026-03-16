@@ -190,7 +190,7 @@ export default function ParticipantsPage() {
         {/* Undergraduate Intern */}
         <div className="col-span-full">
           <h2 className="text-sm font-bold uppercase tracking-wider text-gray-500 mb-6">
-            Undergraduate Intern
+            Undergraduate Interns
           </h2>
           <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
             {[1, 2, 3, 4, 5].map((i) => (
