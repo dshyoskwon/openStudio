@@ -88,6 +88,16 @@ export const projects: Project[] = [
     year: 2026,
   },
   {
+    id: "eco-agents",
+    title: "Eco Agents",
+    meta: "2026 • KMU Alpha Project",
+    type: "Incubating",
+    description:
+      "",
+    year: 2026,
+    isStudentProject: true,
+  },
+  {
     id: "human-ai-collaboration",
     title: "Human-AI Collaboration Tool",
     meta: "2026 • AI Tool",
