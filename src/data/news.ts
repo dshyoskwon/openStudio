@@ -13,20 +13,9 @@ export const newsItems: NewsItem[] = [
     category: "Notice",
   },
   {
-    date: "2026.01.15",
-    title: "Winter Workshop: AI & Interaction",
-    category: "Event",
-  },
-  {
-    date: "2026.01.10",
-    title: "New Project: Smart Mobility",
-    category: "Project",
-  },
-  {
-    date: "2026.02.01",
-    title: "Call for Participants: Spring 2026",
+    date: "2026.03.23",
+    title: "Research Assistant Recruitment / 연구원 모집",
     category: "Recruit",
+    link: "/recruitment",
   },
 ];
-
-

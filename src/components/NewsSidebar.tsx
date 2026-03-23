@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { newsItems } from "@/data/news";
 
 export default function NewsSidebar() {
@@ -13,7 +14,7 @@ export default function NewsSidebar() {
       </div>
       <ul className="flex flex-col gap-6">
         {sortedNews.map((item, idx) => (
-          <li key={idx} className="group cursor-pointer">
+          <li key={idx} className="group">
             <span className="block text-xs text-gray-500 mb-1">{item.date}</span>
             <p className="text-sm font-medium leading-tight group-hover:underline decoration-1 underline-offset-2">
               {item.title}
@@ -21,11 +22,17 @@ export default function NewsSidebar() {
             <span className="inline-block mt-2 text-[10px] border border-gray-300 px-1.5 py-0.5 rounded-full text-gray-500">
               {item.category}
             </span>
+            {item.link && (
+              <Link
+                href={item.link}
+                className="block mt-1.5 text-xs text-gray-400 hover:text-black transition-colors"
+              >
+                ...more
+              </Link>
+            )}
           </li>
         ))}
       </ul>
     </aside>
   );
 }
-
-
