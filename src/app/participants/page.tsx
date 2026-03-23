@@ -203,7 +203,7 @@ export default function ParticipantsPage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="font-bold">Jimin Lee</h3>
+              <h3 className="font-bold">Jungmin Lee</h3>
               <p className="text-xs text-gray-500">Undergraduate Intern</p>
             </div>
             <div className="text-center md:text-left">
@@ -216,7 +216,7 @@ export default function ParticipantsPage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="font-bold">Jiyeon Kim</h3>
+              <h3 className="font-bold">Jiyoon Kim</h3>
               <p className="text-xs text-gray-500">Undergraduate Intern</p>
             </div>
             <div className="text-center md:text-left">
@@ -229,7 +229,7 @@ export default function ParticipantsPage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="font-bold">Yumeen Kim</h3>
+              <h3 className="font-bold">Yumin Kim</h3>
               <p className="text-xs text-gray-500">Undergraduate Intern</p>
             </div>
             {[1, 2].map((i) => (
