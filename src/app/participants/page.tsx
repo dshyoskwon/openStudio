@@ -193,7 +193,46 @@ export default function ParticipantsPage() {
             Undergraduate Interns
           </h2>
           <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-            {[1, 2, 3, 4, 5].map((i) => (
+            <div className="text-center md:text-left">
+              <div className="w-full aspect-square mb-3 rounded-lg overflow-hidden bg-gray-100 grayscale hover:grayscale-0 transition-all">
+                <Image
+                  src="/images/participants/JMLee.jpeg"
+                  alt="Portrait of JM Lee"
+                  width={400}
+                  height={400}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="font-bold">Jimin Lee</h3>
+              <p className="text-xs text-gray-500">Undergraduate Intern</p>
+            </div>
+            <div className="text-center md:text-left">
+              <div className="w-full aspect-square mb-3 rounded-lg overflow-hidden bg-gray-100 grayscale hover:grayscale-0 transition-all">
+                <Image
+                  src="/images/participants/JYKim.jpeg"
+                  alt="Portrait of JY Kim"
+                  width={400}
+                  height={400}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="font-bold">Jiyeon Kim</h3>
+              <p className="text-xs text-gray-500">Undergraduate Intern</p>
+            </div>
+            <div className="text-center md:text-left">
+              <div className="w-full aspect-square mb-3 rounded-lg overflow-hidden bg-gray-100 grayscale hover:grayscale-0 transition-all">
+                <Image
+                  src="/images/participants/YMKim.jpeg"
+                  alt="Portrait of YM Kim"
+                  width={400}
+                  height={400}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="font-bold">Yumeen Kim</h3>
+              <p className="text-xs text-gray-500">Undergraduate Intern</p>
+            </div>
+            {[1, 2].map((i) => (
               <div key={i} className="text-center md:text-left">
                 <div className="w-full aspect-square bg-gray-100 mb-3 rounded-lg grayscale hover:grayscale-0 transition-all" />
                 <h3 className="font-bold">Student Name</h3>
