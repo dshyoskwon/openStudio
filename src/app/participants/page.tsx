@@ -78,10 +78,18 @@ export default function ParticipantsPage() {
             {showGraphics && (
               <div className="flex flex-col items-center md:items-start gap-4">
                 <div className="relative w-32 h-32 rounded-full overflow-hidden bg-gray-200 flex-shrink-0 shadow-lg">
+                  <Image
+                    src="/images/participants/JHSung.jpg"
+                    alt="Portrait of Co-Director Jae-Hyouk Sung"
+                    fill
+                    sizes="128px"
+                    className="object-cover"
+                    priority
+                  />
                 </div>
                 <div className="text-center md:text-left space-y-1">
                   <div className="flex flex-col md:flex-row md:items-baseline md:gap-3">
-                    <h3 className="text-xl font-bold leading-tight">Jaehyuk Sung</h3>
+                    <h3 className="text-xl font-bold leading-tight">Jae-Hyouk Sung</h3>
                     <span className="text-base font-light text-gray-600">(Professor)</span>
                   </div>
                   <p className="text-gray-600">Co-Principal Investigator</p>
