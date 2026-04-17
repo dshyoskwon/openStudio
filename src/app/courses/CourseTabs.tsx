@@ -1,0 +1,107 @@
+"use client";
+
+import { useState } from "react";
+import Slideshow from "./Slideshow";
+
+type YearData = {
+  year: string;
+  label?: string;
+  figmaUrl?: string;
+  videoUrl?: string;
+  images: string[];
+  videos: string[];
+};
+
+type CourseWithFiles = {
+  id: string;
+  title: string;
+  type: "slideshow" | "video" | "list";
+  yearsWithFiles: YearData[];
+};
+
+export default function CourseTabs({ course }: { course: CourseWithFiles }) {
+  const [activeYear, setActiveYear] = useState(course.yearsWithFiles[0]?.year);
+  const activeData = course.yearsWithFiles.find((y) => y.year === activeYear);
+
+  return (
+    <div>
+      {/* Year tabs */}
+      <div className="flex gap-1 border-b border-gray-200 mb-4">
+        {course.yearsWithFiles.map((y) => (
+          <button
+            key={y.year}
+            onClick={() => setActiveYear(y.year)}
+            className={`px-3 py-1.5 text-sm font-medium transition-colors relative ${
+              activeYear === y.year
+                ? "text-black"
+                : "text-gray-400 hover:text-gray-600"
+            }`}
+          >
+            {y.year}
+            {y.label && (
+              <span className="ml-1 text-[10px] text-gray-400 font-normal">
+                ({y.label})
+              </span>
+            )}
+            {activeYear === y.year && (
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-black" />
+            )}
+          </button>
+        ))}
+      </div>
+
+      {/* Content area */}
+      {activeData && (
+        <div className="space-y-4">
+          {/* Figma embed */}
+          {activeData.figmaUrl && (
+            <div className="aspect-video rounded-sm overflow-hidden border border-gray-200">
+              <iframe
+                src={`https://www.figma.com/embed?embed_host=share&url=${encodeURIComponent(activeData.figmaUrl)}`}
+                className="w-full h-full"
+                allowFullScreen
+              />
+            </div>
+          )}
+
+          {/* Slideshow (Interface Design) */}
+          {course.type === "slideshow" && !activeData.figmaUrl && (
+            <Slideshow images={activeData.images} />
+          )}
+
+          {/* Video (Interaction Design) */}
+          {course.type === "video" && !activeData.figmaUrl && (
+            <>
+              {activeData.videoUrl ? (
+                <div className="aspect-video rounded-sm overflow-hidden">
+                  <iframe
+                    src={activeData.videoUrl}
+                    className="w-full h-full"
+                    allowFullScreen
+                  />
+                </div>
+              ) : activeData.videos.length > 0 ? (
+                <div className="space-y-4">
+                  {activeData.videos.map((video, i) => (
+                    <div key={i} className="aspect-video rounded-sm overflow-hidden bg-black">
+                      <video
+                        src={video}
+                        controls
+                        className="w-full h-full"
+                        preload="metadata"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="aspect-video bg-gray-100 rounded-sm flex items-center justify-center text-gray-400 text-sm">
+                  Coming soon
+                </div>
+              )}
+            </>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
