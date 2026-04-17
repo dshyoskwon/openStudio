@@ -43,7 +43,41 @@ export const courses: Course[] = [
       { year: "2025" },
       { year: "2024" },
       { year: "2023" },
-      { year: "2022" },
+      {
+        year: "2022",
+        projects: [
+          {
+            folder: "cashwalk",
+            title: "Cashwalk Renewal",
+            students: "박성현, 장상훈, 허우민, 김윤석, 정해진",
+            description: "Redesigning the Cashwalk app interface to improve user engagement. The project focuses on enhancing the reward system, health tracking, and navigation through user research and iterative prototyping.",
+          },
+          {
+            folder: "peapod",
+            title: "Peapod",
+            students: "최은영, 강형구, 박채린, 임영헌, 강수정",
+            description: "A smart food sharing application service for local communities. The app enables neighbors to share surplus food, reducing waste while building community connections.",
+          },
+          {
+            folder: "Mohaji",
+            title: "Mohaji",
+            students: "",
+            description: "",
+          },
+          {
+            folder: "VeganChallenge",
+            title: "Vegan Challenge",
+            students: "",
+            description: "",
+          },
+          {
+            folder: "WeBus",
+            title: "WeBus",
+            students: "",
+            description: "",
+          },
+        ],
+      },
       {
         year: "2021",
         projects: [
