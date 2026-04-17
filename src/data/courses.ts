@@ -51,7 +51,7 @@ export const courses: Course[] = [
             folder: "AI_Speaker",
             title: "Sleepers",
             students: "김선호, 서정웅, 임정모, 박혜원",
-            description: "Designing a sleep improvement service using AI speakers: leveraging IoT technology to analyze individual sleep patterns and issues, the service provides personalized solutions through a mobile interface, validated via usability testing.",
+            description: "Designing a sleep improvement service using AI speakers. The service leverages IoT technology to analyze individual sleep patterns and provides personalized solutions through a mobile interface. The design was validated through usability testing.",
           },
         ],
       },
