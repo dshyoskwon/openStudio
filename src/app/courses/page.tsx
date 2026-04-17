@@ -1,27 +1,19 @@
 import Link from "next/link";
 import Image from "next/image";
-import fs from "fs";
-import path from "path";
 import { courses } from "@/data/courses";
+import manifest from "@/data/course-manifest.json";
 
-function hasThumbnail(courseId: string): string | null {
-  const extensions = ["jpg", "jpeg", "png", "webp"];
-  for (const ext of extensions) {
-    const filePath = path.join(process.cwd(), "public", "courses", courseId, `thumbnail.${ext}`);
-    if (fs.existsSync(filePath)) return `/courses/${courseId}/thumbnail.${ext}`;
-  }
-  return null;
-}
+const thumbnails = manifest.thumbnails as Record<string, string>;
 
 export default function CoursesPage() {
   const allCourses = [
-    ...courses.map((c) => ({ ...c, href: `/courses/${c.id}`, thumb: hasThumbnail(c.id) })),
+    ...courses.map((c) => ({ ...c, href: `/courses/${c.id}`, thumb: thumbnails[c.id] || null })),
     {
       id: "kmu-alpha",
       title: "KMU Alpha Project",
       description: "국민대학교 알파 프로젝트로 진행된 학생 주도 프로젝트입니다.",
       href: "/courses/kmu-alpha",
-      thumb: hasThumbnail("kmu-alpha"),
+      thumb: thumbnails["kmu-alpha"] || null,
     },
   ];
 
