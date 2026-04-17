@@ -61,13 +61,13 @@ export const courses: Course[] = [
           {
             folder: "Mohaji",
             title: "Mohaji",
-            students: "",
+            students: "강동흔, 강병준, 김장현, 이창준, 풍제석",
             description: "",
           },
           {
             folder: "VeganChallenge",
-            title: "Vegan Challenge",
-            students: "",
+            title: "Vegan Challengers",
+            students: "류기명, 이수민, 장은정, 조유진, 한효임",
             description: "",
           },
           {
