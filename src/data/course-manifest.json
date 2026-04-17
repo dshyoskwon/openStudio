@@ -5,6 +5,12 @@
         "images": [],
         "videos": [],
         "projects": {
+          "EscpaeRoom": {
+            "slides": [],
+            "videos": [
+              "/courses/interaction-design/2022/EscpaeRoom/Designing Escape Room Quizzes with Arduino (KMU _ Industrial Design).mp4"
+            ]
+          },
           "Mini-Project": {
             "slides": [],
             "videos": [
