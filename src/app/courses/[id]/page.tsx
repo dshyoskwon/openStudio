@@ -35,6 +35,15 @@ function getProjectSlides(courseId: string, year: string, folder: string): strin
     .map((f) => `/courses/${courseId}/${year}/${folder}/${f}`);
 }
 
+// 프로젝트 폴더 내 비디오 파일
+function getProjectVideos(courseId: string, year: string, folder: string): string[] {
+  const dir = path.join(process.cwd(), "public", "courses", courseId, year, folder);
+  return readDir(dir)
+    .filter((f) => VID_EXT.test(f))
+    .sort()
+    .map((f) => `/courses/${courseId}/${year}/${folder}/${f}`);
+}
+
 // 년도 폴더에서 프로젝트 하위 폴더 목록 가져오기
 function getProjectFolders(courseId: string, year: string): string[] {
   const dir = path.join(process.cwd(), "public", "courses", courseId, year);
@@ -131,10 +140,11 @@ export default async function CourseDetailPage({
       const projectsWithSlides = projectFolders.map((folder) => {
         const meta = metaProjects.find((m) => m.folder === folder);
         return {
-          title: meta?.title || folder.replace(/-/g, " "),
+          title: meta?.title || folder.replace(/[-_]/g, " "),
           students: meta?.students || "",
           description: meta?.description || "",
           slides: getProjectSlides(course.id, y.year, folder),
+          videos: getProjectVideos(course.id, y.year, folder),
         };
       });
 

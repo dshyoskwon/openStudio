@@ -44,7 +44,17 @@ export const courses: Course[] = [
       { year: "2024" },
       { year: "2023" },
       { year: "2022" },
-      { year: "2021" },
+      {
+        year: "2021",
+        projects: [
+          {
+            folder: "AI_Speaker",
+            title: "AI 스피커 사용자 인터페이스 디자인",
+            students: "",
+            description: "AI 스피커의 사용자 인터페이스를 디자인하고 프로토타입을 제작한 프로젝트입니다.",
+          },
+        ],
+      },
     ],
   },
   {

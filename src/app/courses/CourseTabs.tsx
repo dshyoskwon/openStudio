@@ -9,6 +9,7 @@ type ProjectWithSlides = {
   students: string;
   description: string;
   slides: string[];
+  videos: string[];
 };
 
 type YearData = {
