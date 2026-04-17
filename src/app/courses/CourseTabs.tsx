@@ -2,6 +2,14 @@
 
 import { useState } from "react";
 import Slideshow from "./Slideshow";
+import ProjectViewer from "./ProjectViewer";
+
+type ProjectWithSlides = {
+  title: string;
+  students: string;
+  description: string;
+  slides: string[];
+};
 
 type YearData = {
   year: string;
@@ -10,6 +18,7 @@ type YearData = {
   videoUrl?: string;
   images: string[];
   videos: string[];
+  projects: ProjectWithSlides[];
 };
 
 type CourseWithFiles = {
@@ -64,9 +73,13 @@ export default function CourseTabs({ course }: { course: CourseWithFiles }) {
             </div>
           )}
 
-          {/* Slideshow (Interface Design) */}
+          {/* Project viewer (Interface Design) */}
           {course.type === "slideshow" && !activeData.figmaUrl && (
-            <Slideshow images={activeData.images} />
+            activeData.projects.length > 0 ? (
+              <ProjectViewer projects={activeData.projects} />
+            ) : (
+              <Slideshow images={activeData.images} />
+            )
           )}
 
           {/* Video (Interaction Design) */}

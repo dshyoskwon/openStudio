@@ -1,17 +1,27 @@
-// 과목별 메타데이터. Figma URL이 설정되면 임베드로 표시됩니다.
-// 폴더 기반 자동 로딩: public/courses/{course}/{year}/ 에 파일을 넣으면 자동 반영.
+// 과목별 메타데이터
+// 폴더 기반 자동 로딩: public/courses/{course}/{year}/{project}/ 에 이미지를 넣으면 자동 반영.
+// 썸네일: public/courses/{course}/thumbnail.jpg
+
+export type ProjectMeta = {
+  folder: string; // public/courses/{course}/{year}/{folder}/ 의 폴더명
+  title: string;
+  students: string;
+  description: string;
+};
 
 export type CourseYear = {
   year: string;
-  label?: string; // e.g. "Team-Team Capstone" for special semesters
-  figmaUrl?: string; // Figma embed URL (optional)
-  videoUrl?: string; // External video URL — if not set, scans folder for .mp4
+  label?: string;
+  figmaUrl?: string;
+  videoUrl?: string;
+  projects?: ProjectMeta[]; // Interface Design용 프로젝트 메타데이터
 };
 
 export type Course = {
   id: string;
   title: string;
   description: string;
+  thumbnail?: string; // 썸네일 이미지 경로 (없으면 기본 placeholder)
   type: "slideshow" | "video" | "list";
   years: CourseYear[];
 };
@@ -21,10 +31,15 @@ export const courses: Course[] = [
     id: "interface-design",
     title: "Interface Design",
     description:
-      "인터페이스 디자인의 기초부터 심화까지, 학생들의 프로젝트 결과물을 슬라이드쇼로 소개합니다.",
+      "인터페이스 디자인의 기초부터 심화까지, 학생들의 프로젝트 결과물을 소개합니다.",
     type: "slideshow",
     years: [
-      { year: "2026" },
+      {
+        year: "2026",
+        // projects: [
+        //   { folder: "sample-project", title: "Sample Project", students: "김OO, 이OO", description: "프로젝트 설명" },
+        // ],
+      },
       { year: "2025" },
       { year: "2024" },
       { year: "2023" },
@@ -47,5 +62,3 @@ export const courses: Course[] = [
     ],
   },
 ];
-
-// KMU Alpha Project는 projects data에서 isStudentProject로 필터링
