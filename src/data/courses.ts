@@ -73,7 +73,7 @@ export const courses: Course[] = [
           {
             folder: "WeBus",
             title: "WeBus",
-            students: "",
+            students: "강병찬, 신예지, 이은수, 임수현, 최민재",
             description: "",
           },
         ],
