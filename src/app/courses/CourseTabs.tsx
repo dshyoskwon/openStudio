@@ -15,6 +15,7 @@ type ProjectWithSlides = {
 type YearData = {
   year: string;
   label?: string;
+  students?: string;
   figmaUrl?: string;
   videoUrl?: string;
   images: string[];
@@ -63,6 +64,11 @@ export default function CourseTabs({ course }: { course: CourseWithFiles }) {
       {/* Content area */}
       {activeData && (
         <div className="space-y-4">
+          {/* Year-level students */}
+          {activeData.students && (
+            <p className="text-sm text-gray-500">{activeData.students}</p>
+          )}
+
           {/* Figma embed */}
           {activeData.figmaUrl && (
             <div className="aspect-video rounded-sm overflow-hidden border border-gray-200">

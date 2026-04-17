@@ -92,8 +92,11 @@ export default async function CourseDetailPage({
       const yearFiles = courseFiles[y.year] || { images: [], videos: [], projects: {} };
       const metaProjects = y.projects || [];
 
-      // Build project list from manifest folders, ordered by metadata then remaining
-      const folderNames = Object.keys(yearFiles.projects).sort();
+      // Build project list ordered by metadata, then remaining folders alphabetically
+      const allFolders = Object.keys(yearFiles.projects);
+      const metaOrder = metaProjects.map((m) => m.folder);
+      const remaining = allFolders.filter((f) => !metaOrder.includes(f)).sort();
+      const folderNames = [...metaOrder.filter((f) => allFolders.includes(f)), ...remaining];
       const projectsWithSlides = folderNames.map((folder) => {
         const meta = metaProjects.find((m) => m.folder === folder);
         const files = yearFiles.projects[folder];

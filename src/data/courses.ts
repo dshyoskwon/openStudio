@@ -12,6 +12,7 @@ export type ProjectMeta = {
 export type CourseYear = {
   year: string;
   label?: string;
+  students?: string; // 해당 연도 수강생 목록
   figmaUrl?: string;
   videoUrl?: string;
   projects?: ProjectMeta[]; // Interface Design용 프로젝트 메타데이터
@@ -128,6 +129,7 @@ export const courses: Course[] = [
       { year: "2023", label: "Team-Team Capstone" },
       {
         year: "2022",
+        students: "강병찬, 장현수, 강병준, 신수범, 원가은, 풍제석, 성기종, 강진서, 박채린, 임영현, 이민선, 강수정, 신찬희, 이수민, 이은수, 보넷 알렉시, 피톤 에노라, 곤잘레스 위니 다니엘라, 데 라 자마 세포라",
         projects: [
           {
             folder: "Mini-Project",
