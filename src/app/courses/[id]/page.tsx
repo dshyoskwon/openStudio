@@ -70,6 +70,13 @@ function getVideos(courseId: string, year: string): string[] {
     .map((f) => `/courses/${courseId}/${year}/${f}`);
 }
 
+export function generateStaticParams() {
+  return [
+    ...courses.map((c) => ({ id: c.id })),
+    { id: "kmu-alpha" },
+  ];
+}
+
 export default async function CourseDetailPage({
   params,
 }: {
