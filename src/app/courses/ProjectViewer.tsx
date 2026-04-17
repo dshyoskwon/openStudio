@@ -84,6 +84,17 @@ function SlideViewer({ slides, title }: { slides: string[]; title: string }) {
 function ProjectCard({ project }: { project: ProjectData }) {
   return (
     <div className="border border-gray-200 rounded-sm overflow-hidden">
+      {/* Project info */}
+      <div className="px-4 py-3 border-b border-gray-100">
+        <h3 className="font-bold text-sm">{project.title}</h3>
+        {project.students && (
+          <p className="text-xs text-gray-500 mt-0.5">{project.students}</p>
+        )}
+        {project.description && (
+          <p className="text-sm text-gray-700 mt-1">{project.description}</p>
+        )}
+      </div>
+
       {/* Slide viewer */}
       {project.slides.length > 0 && (
         <div className="p-4 pb-2">
@@ -104,17 +115,6 @@ function ProjectCard({ project }: { project: ProjectData }) {
           </div>
         </div>
       ))}
-
-      {/* Project info */}
-      <div className="px-4 py-3 border-t border-gray-100">
-        <h3 className="font-bold text-sm">{project.title}</h3>
-        {project.students && (
-          <p className="text-xs text-gray-500 mt-0.5">{project.students}</p>
-        )}
-        {project.description && (
-          <p className="text-sm text-gray-700 mt-1">{project.description}</p>
-        )}
-      </div>
     </div>
   );
 }

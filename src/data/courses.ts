@@ -49,9 +49,9 @@ export const courses: Course[] = [
         projects: [
           {
             folder: "AI_Speaker",
-            title: "AI 스피커 사용자 인터페이스 디자인",
-            students: "",
-            description: "AI 스피커의 사용자 인터페이스를 디자인하고 프로토타입을 제작한 프로젝트입니다.",
+            title: "Sleepers",
+            students: "김선호, 서정웅, 임정모, 박혜원",
+            description: "Designing a sleep improvement service using AI speakers: leveraging IoT technology to analyze individual sleep patterns and issues, the service provides personalized solutions through a mobile interface, validated via usability testing.",
           },
         ],
       },
