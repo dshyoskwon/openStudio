@@ -126,7 +126,17 @@ export const courses: Course[] = [
       { year: "2025" },
       { year: "2024" },
       { year: "2023", label: "Team-Team Capstone" },
-      { year: "2022" },
+      {
+        year: "2022",
+        projects: [
+          {
+            folder: "Mini-Project",
+            title: "Mini Project",
+            students: "",
+            description: "",
+          },
+        ],
+      },
     ],
   },
 ];

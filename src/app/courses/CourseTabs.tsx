@@ -94,6 +94,8 @@ export default function CourseTabs({ course }: { course: CourseWithFiles }) {
                     allowFullScreen
                   />
                 </div>
+              ) : activeData.projects.length > 0 ? (
+                <ProjectViewer projects={activeData.projects} />
               ) : activeData.videos.length > 0 ? (
                 <div className="space-y-4">
                   {activeData.videos.map((video, i) => (

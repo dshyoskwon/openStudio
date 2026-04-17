@@ -4,7 +4,14 @@
       "2022": {
         "images": [],
         "videos": [],
-        "projects": {}
+        "projects": {
+          "Mini-Project": {
+            "slides": [],
+            "videos": [
+              "/courses/interaction-design/2022/Mini-Project/video.mp4"
+            ]
+          }
+        }
       },
       "2023": {
         "images": [],
