@@ -103,7 +103,7 @@ export const courses: Course[] = [
               {
                 folder: "Report02",
                 title: "Sungkok Library App Improvement Report",
-                students: "김민서, 신가을",
+                students: "장동혁",
                 description: "국민대학교 성곡도서관 앱의 문제점과 개선 방향을 인터페이스·사용성 관점에서 정리한 기말 보고서. 사용자 조사와 사용성 평가를 바탕으로 실질적인 개선안을 도출하였다. / A final report that examines Kookmin University's Sungkok Library app through an interface and usability lens, turning user research and usability findings into concrete redesign proposals.",
                 layout: "grid",
               },
