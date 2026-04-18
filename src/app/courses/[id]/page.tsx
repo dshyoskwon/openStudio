@@ -162,7 +162,6 @@ export default async function CourseDetailPage({
         <h1 className="text-3xl font-bold uppercase tracking-widest">
           {course.title}
         </h1>
-        <p className="text-sm text-gray-500 mt-2">{course.description}</p>
       </header>
 
       {course.intro && course.intro.length > 0 && (
