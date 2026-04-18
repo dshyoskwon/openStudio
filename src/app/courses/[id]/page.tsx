@@ -6,10 +6,12 @@ import manifest from "@/data/course-manifest.json";
 import CourseTabs from "../CourseTabs";
 
 type ManifestProject = { slides: string[]; videos: string[] };
+type ManifestCategory = { projects: Record<string, ManifestProject> };
 type ManifestYear = {
   images: string[];
   videos: string[];
   projects: Record<string, ManifestProject>;
+  categories?: Record<string, ManifestCategory>;
 };
 type Manifest = {
   courses: Record<string, Record<string, ManifestYear>>;
@@ -86,26 +88,54 @@ export default async function CourseDetailPage({
 
   const courseFiles = courseManifest[course.id] || {};
 
+  const buildProjects = (
+    metaList: { folder: string; title: string; students: string; description: string }[],
+    manifestProjects: Record<string, ManifestProject>,
+  ) => {
+    const allFolders = Object.keys(manifestProjects);
+    const metaOrder = metaList.map((m) => m.folder);
+    const remaining = allFolders.filter((f) => !metaOrder.includes(f)).sort();
+    const folderNames = [...metaOrder.filter((f) => allFolders.includes(f)), ...remaining];
+    return folderNames.map((folder) => {
+      const meta = metaList.find((m) => m.folder === folder);
+      const files = manifestProjects[folder];
+      return {
+        title: meta?.title || folder.replace(/[-_]/g, " "),
+        students: meta?.students || "",
+        description: meta?.description || "",
+        slides: files.slides,
+        videos: files.videos,
+      };
+    });
+  };
+
   const courseData = {
     ...course,
     yearsWithFiles: course.years.map((y) => {
-      const yearFiles = courseFiles[y.year] || { images: [], videos: [], projects: {} };
+      const yearFiles =
+        courseFiles[y.year] || { images: [], videos: [], projects: {}, categories: {} };
       const metaProjects = y.projects || [];
+      const metaCategories = y.categories || [];
 
-      // Build project list ordered by metadata, then remaining folders alphabetically
-      const allFolders = Object.keys(yearFiles.projects);
-      const metaOrder = metaProjects.map((m) => m.folder);
-      const remaining = allFolders.filter((f) => !metaOrder.includes(f)).sort();
-      const folderNames = [...metaOrder.filter((f) => allFolders.includes(f)), ...remaining];
-      const projectsWithSlides = folderNames.map((folder) => {
-        const meta = metaProjects.find((m) => m.folder === folder);
-        const files = yearFiles.projects[folder];
+      const projectsWithSlides = buildProjects(metaProjects, yearFiles.projects);
+
+      // Build categories: preserve metadata order, then append any unreferenced category folders
+      const manifestCategories = yearFiles.categories || {};
+      const catOrder = metaCategories.map((c) => c.id);
+      const extraCats = Object.keys(manifestCategories)
+        .filter((c) => !catOrder.includes(c))
+        .sort();
+      const categoryIds = [
+        ...catOrder.filter((c) => manifestCategories[c]),
+        ...extraCats,
+      ];
+      const categories = categoryIds.map((id) => {
+        const meta = metaCategories.find((c) => c.id === id);
+        const catManifest = manifestCategories[id];
         return {
-          title: meta?.title || folder.replace(/[-_]/g, " "),
-          students: meta?.students || "",
-          description: meta?.description || "",
-          slides: files.slides,
-          videos: files.videos,
+          id,
+          label: meta?.label || id,
+          projects: buildProjects(meta?.projects || [], catManifest.projects),
         };
       });
 
@@ -114,6 +144,7 @@ export default async function CourseDetailPage({
         images: yearFiles.images,
         videos: yearFiles.videos,
         projects: projectsWithSlides,
+        categories,
       };
     }),
   };

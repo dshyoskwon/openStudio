@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Slideshow from "./Slideshow";
 import ProjectViewer from "./ProjectViewer";
 
@@ -12,6 +12,12 @@ type ProjectWithSlides = {
   videos: string[];
 };
 
+type CategoryWithProjects = {
+  id: string;
+  label: string;
+  projects: ProjectWithSlides[];
+};
+
 type YearData = {
   year: string;
   label?: string;
@@ -21,6 +27,7 @@ type YearData = {
   images: string[];
   videos: string[];
   projects: ProjectWithSlides[];
+  categories?: CategoryWithProjects[];
 };
 
 type CourseWithFiles = {
@@ -33,6 +40,17 @@ type CourseWithFiles = {
 export default function CourseTabs({ course }: { course: CourseWithFiles }) {
   const [activeYear, setActiveYear] = useState(course.yearsWithFiles[0]?.year);
   const activeData = course.yearsWithFiles.find((y) => y.year === activeYear);
+  const categories = activeData?.categories ?? [];
+  const [activeCategoryId, setActiveCategoryId] = useState<string | null>(
+    categories[0]?.id ?? null,
+  );
+
+  useEffect(() => {
+    setActiveCategoryId(activeData?.categories?.[0]?.id ?? null);
+  }, [activeYear, activeData]);
+
+  const activeCategory =
+    categories.find((c) => c.id === activeCategoryId) ?? categories[0];
 
   return (
     <div>
@@ -77,7 +95,27 @@ export default function CourseTabs({ course }: { course: CourseWithFiles }) {
 
           {/* Project viewer (Interface Design) */}
           {course.type === "slideshow" && !activeData.figmaUrl && (
-            activeData.projects.length > 0 ? (
+            categories.length > 0 ? (
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <label className="text-xs text-gray-500 uppercase tracking-wider">
+                    Category
+                  </label>
+                  <select
+                    value={activeCategory?.id ?? ""}
+                    onChange={(e) => setActiveCategoryId(e.target.value)}
+                    className="text-sm border border-gray-300 rounded-sm px-3 py-1.5 bg-white focus:outline-none focus:border-black"
+                  >
+                    {categories.map((c) => (
+                      <option key={c.id} value={c.id}>
+                        {c.label}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <ProjectViewer projects={activeCategory?.projects ?? []} />
+              </div>
+            ) : activeData.projects.length > 0 ? (
               <ProjectViewer projects={activeData.projects} />
             ) : (
               <Slideshow images={activeData.images} />

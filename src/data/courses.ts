@@ -9,6 +9,12 @@ export type ProjectMeta = {
   description: string;
 };
 
+export type CourseCategory = {
+  id: string; // {year}/{id}/ 폴더명
+  label: string; // 드롭다운에 표시할 라벨
+  projects: ProjectMeta[];
+};
+
 export type CourseYear = {
   year: string;
   label?: string;
@@ -16,6 +22,7 @@ export type CourseYear = {
   figmaUrl?: string;
   videoUrl?: string;
   projects?: ProjectMeta[]; // Interface Design용 프로젝트 메타데이터
+  categories?: CourseCategory[]; // 카테고리별(Mini/Final 등)로 프로젝트 그룹화
 };
 
 export type Course = {
@@ -43,7 +50,77 @@ export const courses: Course[] = [
       },
       { year: "2025" },
       { year: "2024" },
-      { year: "2023" },
+      {
+        year: "2023",
+        categories: [
+          {
+            id: "MiniProject",
+            label: "Mini Project",
+            projects: [
+              {
+                folder: "KimYeonjeong-KimChohye",
+                title: "Mini Project — 김연정, 김초혜",
+                students: "김연정, 김초혜",
+                description: "",
+              },
+              {
+                folder: "HyunDonghee-ChoiHarim",
+                title: "Mini Project — 현동희, 최하림",
+                students: "현동희, 최하림",
+                description: "",
+              },
+              {
+                folder: "KangJinseo-NamSeongmin",
+                title: "Mini Project — 강진서, 남성민",
+                students: "강진서, 남성민",
+                description: "",
+              },
+              {
+                folder: "KimDawon-JangYijun",
+                title: "Mini Project — 김다원, 장이준",
+                students: "김다원, 장이준",
+                description: "",
+              },
+            ],
+          },
+          {
+            id: "FinalProject",
+            label: "Final Project",
+            projects: [
+              {
+                folder: "당근마켓앱",
+                title: "Carrot Market",
+                students: "권구주, 김중훈, 백인호, 조수진",
+                description: "",
+              },
+              {
+                folder: "성곡도서관앱",
+                title: "Sunggok Library App",
+                students: "김성민, 이관형, 최하림, 하성현, 현동희",
+                description: "",
+              },
+              {
+                folder: "종합병원앱",
+                title: "사인디 — General Hospital UI",
+                students: "남성민, 강진서, 이재백, 박주형, 김예찬",
+                description: "",
+              },
+              {
+                folder: "경기사이버도서관앱",
+                title: "Gyeonggi Cyber Library App",
+                students: "",
+                description: "",
+              },
+              {
+                folder: "반려동물입양서비스앱",
+                title: "Paw-in-Hand",
+                students: "",
+                description: "",
+              },
+            ],
+          },
+        ],
+      },
       {
         year: "2022",
         projects: [

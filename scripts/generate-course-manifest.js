@@ -45,8 +45,10 @@ for (const courseId of safeReadDir(COURSES_DIR)) {
       .sort()
       .map((f) => `/courses/${courseId}/${year}/${f}`);
 
-    // Scan project subfolders
+    // Scan project subfolders (one level deep = flat project,
+    // two levels deep = category → project)
     const projects = {};
+    const categories = {};
     for (const folder of safeReadDir(yearDir)) {
       const folderPath = path.join(yearDir, folder);
       if (!isDir(folderPath) || folder === ".gitkeep") continue;
@@ -61,10 +63,42 @@ for (const courseId of safeReadDir(COURSES_DIR)) {
         .sort()
         .map((f) => `/courses/${courseId}/${year}/${folder}/${f}`);
 
-      projects[folder] = { slides, videos };
+      const hasMedia = slides.length > 0 || videos.length > 0;
+
+      // Scan one level deeper for nested projects inside categories
+      const nestedProjects = {};
+      for (const sub of safeReadDir(folderPath)) {
+        const subPath = path.join(folderPath, sub);
+        if (!isDir(subPath) || sub === ".gitkeep") continue;
+
+        const subSlides = safeReadDir(subPath)
+          .filter((f) => IMG_EXT.test(f))
+          .sort()
+          .map((f) => `/courses/${courseId}/${year}/${folder}/${sub}/${f}`);
+
+        const subVideos = safeReadDir(subPath)
+          .filter((f) => VID_EXT.test(f))
+          .sort()
+          .map((f) => `/courses/${courseId}/${year}/${folder}/${sub}/${f}`);
+
+        if (subSlides.length > 0 || subVideos.length > 0) {
+          nestedProjects[sub] = { slides: subSlides, videos: subVideos };
+        }
+      }
+
+      if (hasMedia) {
+        projects[folder] = { slides, videos };
+      } else if (Object.keys(nestedProjects).length > 0) {
+        categories[folder] = { projects: nestedProjects };
+      }
     }
 
-    manifest[courseId][year] = { images: rootImages, videos: rootVideos, projects };
+    manifest[courseId][year] = {
+      images: rootImages,
+      videos: rootVideos,
+      projects,
+      categories,
+    };
   }
 }
 
