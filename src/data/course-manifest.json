@@ -41,7 +41,18 @@
       "2025": {
         "images": [],
         "videos": [],
-        "projects": {},
+        "projects": {
+          "Emotion LED": {
+            "slides": [],
+            "videos": [
+              "/courses/interaction-design/2025/Emotion LED/20241526박서연_Noisy.mp4",
+              "/courses/interaction-design/2025/Emotion LED/Alexis Chrzanowski crying .mp4",
+              "/courses/interaction-design/2025/Emotion LED/Interactive_Capstone_Product_Design_20221569_KimJiYoon.mp4",
+              "/courses/interaction-design/2025/Emotion LED/엄정우.mov",
+              "/courses/interaction-design/2025/Emotion LED/전다빈_202301555_led_nervous.mp4"
+            ]
+          }
+        },
         "categories": {}
       },
       "2026": {
@@ -1585,7 +1596,227 @@
         "images": [],
         "videos": [],
         "projects": {},
-        "categories": {}
+        "categories": {
+          "FinalProject": {
+            "projects": {
+              "JeongDawon": {
+                "slides": [
+                  "/courses/interface-design/2025/FinalProject/JeongDawon/slide-1.jpg",
+                  "/courses/interface-design/2025/FinalProject/JeongDawon/slide-2.jpg",
+                  "/courses/interface-design/2025/FinalProject/JeongDawon/slide-3.jpg",
+                  "/courses/interface-design/2025/FinalProject/JeongDawon/slide-4.jpg",
+                  "/courses/interface-design/2025/FinalProject/JeongDawon/slide-5.jpg",
+                  "/courses/interface-design/2025/FinalProject/JeongDawon/slide-6.jpg"
+                ],
+                "videos": []
+              },
+              "KimJiwon": {
+                "slides": [
+                  "/courses/interface-design/2025/FinalProject/KimJiwon/slide-1.jpg",
+                  "/courses/interface-design/2025/FinalProject/KimJiwon/slide-2.jpg",
+                  "/courses/interface-design/2025/FinalProject/KimJiwon/slide-3.jpg",
+                  "/courses/interface-design/2025/FinalProject/KimJiwon/slide-4.jpg",
+                  "/courses/interface-design/2025/FinalProject/KimJiwon/slide-5.jpg"
+                ],
+                "videos": []
+              }
+            }
+          },
+          "MiniProject": {
+            "projects": {
+              "BaeSubin-JeongDawon": {
+                "slides": [
+                  "/courses/interface-design/2025/MiniProject/BaeSubin-JeongDawon/slide-01.jpg",
+                  "/courses/interface-design/2025/MiniProject/BaeSubin-JeongDawon/slide-02.jpg",
+                  "/courses/interface-design/2025/MiniProject/BaeSubin-JeongDawon/slide-03.jpg",
+                  "/courses/interface-design/2025/MiniProject/BaeSubin-JeongDawon/slide-04.jpg",
+                  "/courses/interface-design/2025/MiniProject/BaeSubin-JeongDawon/slide-05.jpg",
+                  "/courses/interface-design/2025/MiniProject/BaeSubin-JeongDawon/slide-06.jpg",
+                  "/courses/interface-design/2025/MiniProject/BaeSubin-JeongDawon/slide-07.jpg",
+                  "/courses/interface-design/2025/MiniProject/BaeSubin-JeongDawon/slide-08.jpg",
+                  "/courses/interface-design/2025/MiniProject/BaeSubin-JeongDawon/slide-09.jpg",
+                  "/courses/interface-design/2025/MiniProject/BaeSubin-JeongDawon/slide-10.jpg",
+                  "/courses/interface-design/2025/MiniProject/BaeSubin-JeongDawon/slide-11.jpg",
+                  "/courses/interface-design/2025/MiniProject/BaeSubin-JeongDawon/slide-12.jpg",
+                  "/courses/interface-design/2025/MiniProject/BaeSubin-JeongDawon/slide-13.jpg",
+                  "/courses/interface-design/2025/MiniProject/BaeSubin-JeongDawon/slide-14.jpg",
+                  "/courses/interface-design/2025/MiniProject/BaeSubin-JeongDawon/slide-15.jpg",
+                  "/courses/interface-design/2025/MiniProject/BaeSubin-JeongDawon/slide-16.jpg",
+                  "/courses/interface-design/2025/MiniProject/BaeSubin-JeongDawon/slide-17.jpg",
+                  "/courses/interface-design/2025/MiniProject/BaeSubin-JeongDawon/slide-18.jpg"
+                ],
+                "videos": []
+              },
+              "KangIhyun-KoHyun": {
+                "slides": [
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-01.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-02.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-03.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-04.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-05.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-06.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-07.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-08.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-09.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-10.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-11.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-12.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-13.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-14.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-15.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-16.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-17.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-18.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-19.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-20.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-21.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-22.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-23.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-24.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-25.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-26.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-27.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-28.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-29.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-30.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-31.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-32.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-33.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-34.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-35.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-36.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-37.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-38.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-39.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-40.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-41.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-42.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-43.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-44.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-45.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-46.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-47.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-48.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-49.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-50.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-51.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-52.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-53.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-54.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-55.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-56.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-57.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-58.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-59.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-60.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-61.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-62.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-63.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-64.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-65.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-66.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-67.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-68.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-69.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-70.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-71.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-72.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-73.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-74.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-75.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-76.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-77.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-78.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-79.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-80.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-81.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-82.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-83.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-84.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-85.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-86.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-87.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-88.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-89.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-90.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-91.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-92.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-93.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-94.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-95.jpg",
+                  "/courses/interface-design/2025/MiniProject/KangIhyun-KoHyun/slide-96.jpg"
+                ],
+                "videos": []
+              },
+              "KimJiwon-EomJeongwoo": {
+                "slides": [
+                  "/courses/interface-design/2025/MiniProject/KimJiwon-EomJeongwoo/slide-01.jpg",
+                  "/courses/interface-design/2025/MiniProject/KimJiwon-EomJeongwoo/slide-02.jpg",
+                  "/courses/interface-design/2025/MiniProject/KimJiwon-EomJeongwoo/slide-03.jpg",
+                  "/courses/interface-design/2025/MiniProject/KimJiwon-EomJeongwoo/slide-04.jpg",
+                  "/courses/interface-design/2025/MiniProject/KimJiwon-EomJeongwoo/slide-05.jpg",
+                  "/courses/interface-design/2025/MiniProject/KimJiwon-EomJeongwoo/slide-06.jpg",
+                  "/courses/interface-design/2025/MiniProject/KimJiwon-EomJeongwoo/slide-07.jpg",
+                  "/courses/interface-design/2025/MiniProject/KimJiwon-EomJeongwoo/slide-08.jpg",
+                  "/courses/interface-design/2025/MiniProject/KimJiwon-EomJeongwoo/slide-09.jpg",
+                  "/courses/interface-design/2025/MiniProject/KimJiwon-EomJeongwoo/slide-10.jpg",
+                  "/courses/interface-design/2025/MiniProject/KimJiwon-EomJeongwoo/slide-11.jpg",
+                  "/courses/interface-design/2025/MiniProject/KimJiwon-EomJeongwoo/slide-12.jpg",
+                  "/courses/interface-design/2025/MiniProject/KimJiwon-EomJeongwoo/slide-13.jpg",
+                  "/courses/interface-design/2025/MiniProject/KimJiwon-EomJeongwoo/slide-14.jpg",
+                  "/courses/interface-design/2025/MiniProject/KimJiwon-EomJeongwoo/slide-15.jpg",
+                  "/courses/interface-design/2025/MiniProject/KimJiwon-EomJeongwoo/slide-16.jpg",
+                  "/courses/interface-design/2025/MiniProject/KimJiwon-EomJeongwoo/slide-17.jpg",
+                  "/courses/interface-design/2025/MiniProject/KimJiwon-EomJeongwoo/slide-18.jpg",
+                  "/courses/interface-design/2025/MiniProject/KimJiwon-EomJeongwoo/slide-19.jpg",
+                  "/courses/interface-design/2025/MiniProject/KimJiwon-EomJeongwoo/slide-20.jpg",
+                  "/courses/interface-design/2025/MiniProject/KimJiwon-EomJeongwoo/slide-21.jpg"
+                ],
+                "videos": []
+              },
+              "LeeHyerin": {
+                "slides": [
+                  "/courses/interface-design/2025/MiniProject/LeeHyerin/slide-01.jpg",
+                  "/courses/interface-design/2025/MiniProject/LeeHyerin/slide-02.jpg",
+                  "/courses/interface-design/2025/MiniProject/LeeHyerin/slide-03.jpg",
+                  "/courses/interface-design/2025/MiniProject/LeeHyerin/slide-04.jpg",
+                  "/courses/interface-design/2025/MiniProject/LeeHyerin/slide-05.jpg",
+                  "/courses/interface-design/2025/MiniProject/LeeHyerin/slide-06.jpg",
+                  "/courses/interface-design/2025/MiniProject/LeeHyerin/slide-07.jpg",
+                  "/courses/interface-design/2025/MiniProject/LeeHyerin/slide-08.jpg",
+                  "/courses/interface-design/2025/MiniProject/LeeHyerin/slide-09.jpg",
+                  "/courses/interface-design/2025/MiniProject/LeeHyerin/slide-10.jpg",
+                  "/courses/interface-design/2025/MiniProject/LeeHyerin/slide-11.jpg",
+                  "/courses/interface-design/2025/MiniProject/LeeHyerin/slide-12.jpg"
+                ],
+                "videos": []
+              },
+              "NamSeunghyun": {
+                "slides": [
+                  "/courses/interface-design/2025/MiniProject/NamSeunghyun/slide-01.jpg",
+                  "/courses/interface-design/2025/MiniProject/NamSeunghyun/slide-02.jpg",
+                  "/courses/interface-design/2025/MiniProject/NamSeunghyun/slide-03.jpg",
+                  "/courses/interface-design/2025/MiniProject/NamSeunghyun/slide-04.jpg",
+                  "/courses/interface-design/2025/MiniProject/NamSeunghyun/slide-05.jpg",
+                  "/courses/interface-design/2025/MiniProject/NamSeunghyun/slide-06.jpg",
+                  "/courses/interface-design/2025/MiniProject/NamSeunghyun/slide-07.jpg",
+                  "/courses/interface-design/2025/MiniProject/NamSeunghyun/slide-08.jpg",
+                  "/courses/interface-design/2025/MiniProject/NamSeunghyun/slide-09.jpg",
+                  "/courses/interface-design/2025/MiniProject/NamSeunghyun/slide-10.jpg",
+                  "/courses/interface-design/2025/MiniProject/NamSeunghyun/slide-11.jpg",
+                  "/courses/interface-design/2025/MiniProject/NamSeunghyun/slide-12.jpg",
+                  "/courses/interface-design/2025/MiniProject/NamSeunghyun/slide-13.jpg",
+                  "/courses/interface-design/2025/MiniProject/NamSeunghyun/slide-14.jpg",
+                  "/courses/interface-design/2025/MiniProject/NamSeunghyun/slide-15.jpg",
+                  "/courses/interface-design/2025/MiniProject/NamSeunghyun/slide-16.jpg",
+                  "/courses/interface-design/2025/MiniProject/NamSeunghyun/slide-17.jpg",
+                  "/courses/interface-design/2025/MiniProject/NamSeunghyun/slide-18.jpg"
+                ],
+                "videos": []
+              }
+            }
+          }
+        }
       },
       "2026": {
         "images": [],

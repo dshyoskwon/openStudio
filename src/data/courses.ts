@@ -49,7 +49,67 @@ export const courses: Course[] = [
         //   { folder: "sample-project", title: "Sample Project", students: "김OO, 이OO", description: "프로젝트 설명" },
         // ],
       },
-      { year: "2025" },
+      {
+        year: "2025",
+        categories: [
+          {
+            id: "MiniProject",
+            label: "Mini Project",
+            projects: [
+              {
+                folder: "NamSeunghyun",
+                title: "LG Lightwave Oven (MP-945G) UI Redesign",
+                students: "남승현",
+                description: "13년간 사용한 LG 광파오븐(MP-945G 시리즈)의 직관성이 떨어지는 물리 버튼·다이얼 인터페이스를 분석하고 UI를 재설계한 미니 프로젝트. 전자레인지·오븐·그릴 등 다양한 조리 모드를 설명서 없이도 이해할 수 있도록 개선하였다. / A mini project redesigning the UI of an LG Lightwave Oven (MP-945G series) used in the household for 13 years. Rethinks the unintuitive physical buttons and rotary dial so that microwave, oven, grill and other cooking modes can be understood without the manual.",
+              },
+              {
+                folder: "KimJiwon-EomJeongwoo",
+                title: "Bidet Re-Design",
+                students: "김지원, 엄정우",
+                description: "복잡한 조작 패널로 인해 일부 기능만 사용되던 비데의 UI를 재설계한 미니 프로젝트. 자주 쓰는 기능을 중심으로 조작 흐름을 정리하고, 버튼 배치와 피드백을 사용자 관점에서 다시 설계하였다. / A mini project redesigning a bidet's control panel, which was so cluttered that most users only ever reached for a few features. Reorganizes the interaction flow around frequently used functions and reworks button layout and feedback from the user's perspective.",
+              },
+              {
+                folder: "KangIhyun-KoHyun",
+                title: "ASUS ROG Ally UI Re-Design",
+                students: "강이현, 고현",
+                description: "휴대용 게이밍 PC 'ASUS ROG Ally'의 Armoury Crate 런처 UI를 재설계한 미니 프로젝트. 게임 실행·설정·퍼포먼스 튜닝의 흐름을 한 손 조작 환경에 맞게 재구성하였다. / A mini project redesigning the Armoury Crate launcher UI for the ASUS ROG Ally handheld gaming PC. Rebuilds the flow for launching games, adjusting settings, and tuning performance around single-hand operation.",
+              },
+              {
+                folder: "BaeSubin-JeongDawon",
+                title: "Boiler Temperature Controller Redesign",
+                students: "배수빈, 정다원",
+                description: "가정용 보일러 온도 조절기의 복잡한 인터페이스를 개선한 미니 프로젝트. 자주 쓰는 난방·온수 조작을 앞으로 꺼내고, 정보 구조와 와이어프레임을 다시 짜 실사용 상황에 맞는 UI를 제안하였다. / A mini project improving a residential boiler temperature controller. Surfaces the heating and hot-water controls people actually reach for, and rebuilds the information architecture and wireframes around real-life use.",
+              },
+              {
+                folder: "LeeHyerin",
+                title: "Himpel Ceiling Duct Air Purifier UI Redesign",
+                students: "이혜린",
+                description: "Himpel 사 천장 덕트형 공기청정기의 벽면 UI를 개선한 미니 프로젝트. 모드 선택·풍량 조절·필터 상태 확인이 직관적으로 이루어지도록 아이콘과 정보 구조를 다시 설계하였다. / A mini project improving the wall-mounted UI of a Himpel ceiling duct air purifier. Redesigns icons and information structure so that mode selection, airflow control, and filter status are understood at a glance.",
+              },
+            ],
+          },
+          {
+            id: "FinalProject",
+            label: "Final Project",
+            projects: [
+              {
+                folder: "KimJiwon",
+                title: "Ttareungi App Usability Improvement Report",
+                students: "김지원",
+                description: "서울시 공공자전거 '따릉이' 앱의 사용성을 실사용자 관점에서 조사·평가하고 개선 디자인을 제안한 기말 보고서. 설문과 사용성 평가를 바탕으로 대여·반납·탐색 흐름의 구조적 문제를 도출하였다. / A final report that investigates the usability of Seoul's public bike 'Ttareungi' app from real riders' perspective and proposes redesigns. Surfaces structural issues in the rental, return, and discovery flows through surveys and usability testing.",
+                layout: "grid",
+              },
+              {
+                folder: "JeongDawon",
+                title: "Korail Talk App Redesign Report",
+                students: "정다원",
+                description: "한국철도공사의 모바일 예매 앱 '코레일톡'을 이용 편의성 관점에서 재설계한 기말 보고서. 유사 서비스(티머니GO)와 디지털 정부서비스 UI/UX 가이드라인을 비교 분석하여 개선안을 도출하였다. / A final report redesigning 'Korail Talk', the Korean rail mobile booking app, through the lens of user convenience. Draws improvements from a comparative analysis with similar services (TmoneyGO) and the Digital Government Services UI/UX guidelines.",
+                layout: "grid",
+              },
+            ],
+          },
+        ],
+      },
       {
         year: "2024",
         categories: [
