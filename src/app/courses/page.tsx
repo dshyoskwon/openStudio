@@ -73,7 +73,7 @@ export default function CoursesPage() {
               <h2 className="text-lg font-bold group-hover:underline">
                 {course.title}
               </h2>
-              <p className="text-sm text-gray-500 mt-0.5 line-clamp-1">
+              <p className="text-sm text-gray-500 mt-0.5 line-clamp-3 leading-snug">
                 {course.description}
               </p>
             </div>

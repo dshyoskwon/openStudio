@@ -41,7 +41,7 @@ export const courses: Course[] = [
     id: "interface-design",
     title: "Interface Design",
     description:
-      "인터페이스 디자인의 기초부터 심화까지, 학생들의 프로젝트 결과물을 소개합니다.",
+      "UI Design — building interfaces that balance usability, functionality, and aesthetics. Covers user research, scenarios, prototyping, and user testing across GUI, Voice, Gesture, and Tangible interfaces.",
     intro: [
       "User Interface (UI) Design is the design process that designers/engineers use to build interfaces in software or computerized devices, focusing on usability, functionality, as well as looks or style. Interface is an access point where users interact with the system, product, and service. Designers seek to create interfaces that users find easy to use and pleasurable. Moreover, UI design requires an understanding of the capabilities and desires of people and the kinds of technology that are available.",
       "This lecture will introduce practical techniques to support students to conduct user research, design user scenario and storyboard, choose the right research method and prototyping method, plan pilot test and user test, collect data, and analyze data. The number of different types of up-to-date interfaces (e.g., Graphical User Interface, Voice User Interface, Gesture User Interface, Tangible User Interface, etc.) and applications available will be introduced in the series of lectures.",
