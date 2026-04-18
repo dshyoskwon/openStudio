@@ -57,6 +57,12 @@ function readCheckbox(prop: NotionProperty | undefined): boolean {
   return p.checkbox ?? false;
 }
 
+function mergeNews(notion: NewsItem[], local: NewsItem[]): NewsItem[] {
+  const seen = new Set(notion.map((n) => `${n.date}|${n.title}`));
+  const extras = local.filter((n) => !seen.has(`${n.date}|${n.title}`));
+  return [...notion, ...extras];
+}
+
 export async function fetchNewsFromNotion(): Promise<NewsItem[]> {
   const token = process.env.NOTION_TOKEN;
   const databaseId = process.env.NOTION_NEWS_DATABASE_ID;
@@ -117,5 +123,5 @@ export async function fetchNewsFromNotion(): Promise<NewsItem[]> {
     });
   }
 
-  return items.length > 0 ? items : fallbackNews;
+  return mergeNews(items, fallbackNews);
 }
