@@ -7,6 +7,7 @@ export type ProjectMeta = {
   title: string;
   students: string;
   description: string;
+  layout?: "default" | "grid"; // grid: 슬라이드 전체를 3열 그리드로 한번에 표시
 };
 
 export type CourseCategory = {
@@ -49,7 +50,67 @@ export const courses: Course[] = [
         // ],
       },
       { year: "2025" },
-      { year: "2024" },
+      {
+        year: "2024",
+        categories: [
+          {
+            id: "MiniProject",
+            label: "Mini Project",
+            projects: [
+              {
+                folder: "LeeMinseo",
+                title: "Mini Project — 이민서",
+                students: "이민서",
+                description: "",
+              },
+              {
+                folder: "ImDabin-JeongJiho",
+                title: "KCARD — 임다빈, 정지호",
+                students: "임다빈, 정지호",
+                description: "",
+              },
+              {
+                folder: "KimSihyeong-JangDonghyeok",
+                title: "Mini Project — 김시형, 장동혁",
+                students: "김시형, 장동혁",
+                description: "",
+              },
+              {
+                folder: "KimSiwoo-KwonJimin",
+                title: "Mini Project — 김시우, 권지민",
+                students: "김시우, 권지민",
+                description: "",
+              },
+              {
+                folder: "KimMinseo-ShinGaeul",
+                title: "Mini Project — 김민서, 신가을",
+                students: "김민서, 신가을",
+                description: "",
+              },
+            ],
+          },
+          {
+            id: "FinalProject",
+            label: "Final Project",
+            projects: [
+              {
+                folder: "Report01",
+                title: "Report 01",
+                students: "",
+                description: "",
+                layout: "grid",
+              },
+              {
+                folder: "Report02",
+                title: "Report 02",
+                students: "",
+                description: "",
+                layout: "grid",
+              },
+            ],
+          },
+        ],
+      },
       {
         year: "2023",
         categories: [

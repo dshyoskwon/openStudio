@@ -89,7 +89,13 @@ export default async function CourseDetailPage({
   const courseFiles = courseManifest[course.id] || {};
 
   const buildProjects = (
-    metaList: { folder: string; title: string; students: string; description: string }[],
+    metaList: {
+      folder: string;
+      title: string;
+      students: string;
+      description: string;
+      layout?: "default" | "grid";
+    }[],
     manifestProjects: Record<string, ManifestProject>,
   ) => {
     const allFolders = Object.keys(manifestProjects);
@@ -105,6 +111,7 @@ export default async function CourseDetailPage({
         description: meta?.description || "",
         slides: files.slides,
         videos: files.videos,
+        layout: meta?.layout,
       };
     });
   };

@@ -10,6 +10,7 @@ type ProjectWithSlides = {
   description: string;
   slides: string[];
   videos: string[];
+  layout?: "default" | "grid";
 };
 
 type CategoryWithProjects = {

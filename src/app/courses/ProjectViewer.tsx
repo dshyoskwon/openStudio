@@ -9,6 +9,7 @@ type ProjectData = {
   description: string;
   slides: string[];
   videos: string[];
+  layout?: "default" | "grid";
 };
 
 function SlideViewer({ slides, title }: { slides: string[]; title: string }) {
@@ -81,6 +82,27 @@ function SlideViewer({ slides, title }: { slides: string[]; title: string }) {
   );
 }
 
+function SlideGrid({ slides, title }: { slides: string[]; title: string }) {
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+      {slides.map((slide, i) => (
+        <div key={i} className="relative aspect-[16/9] bg-gray-100 rounded-sm overflow-hidden">
+          <Image
+            src={slide}
+            alt={`${title} — page ${i + 1}`}
+            fill
+            className="object-contain"
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+          />
+          <span className="absolute bottom-1 right-1 text-[10px] text-gray-500 bg-white/80 px-1 rounded">
+            {i + 1}
+          </span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function ProjectCard({ project }: { project: ProjectData }) {
   return (
     <div className="border border-gray-200 rounded-sm overflow-hidden">
@@ -98,7 +120,11 @@ function ProjectCard({ project }: { project: ProjectData }) {
       {/* Slide viewer */}
       {project.slides.length > 0 && (
         <div className="p-4 pb-2">
-          <SlideViewer slides={project.slides} title={project.title} />
+          {project.layout === "grid" ? (
+            <SlideGrid slides={project.slides} title={project.title} />
+          ) : (
+            <SlideViewer slides={project.slides} title={project.title} />
+          )}
         </div>
       )}
 
