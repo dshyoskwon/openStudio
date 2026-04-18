@@ -485,18 +485,60 @@ export const courses: Course[] = [
       {
         year: "2022",
         students: "강병찬, 장현수, 강병준, 신수범, 원가은, 풍제석, 성기종, 강진서, 박채린, 임영현, 이민선, 강수정, 신찬희, 이수민, 이은수, 보넷 알렉시, 피톤 에노라, 곤잘레스 위니 다니엘라, 데 라 자마 세포라",
-        projects: [
+        categories: [
           {
-            folder: "Mini-Project",
-            title: "Mini Project",
-            students: "",
-            description: "인터랙션 디자인 기초를 습득한 후에 아두이노와 기본적인 센서 및 액츄에이터를 활용하여 일상 생활에서 필요한 간단한 제품 아이디어를 제안합니다. / After learning the fundamentals of interaction design, students propose simple product ideas for everyday life using Arduino with basic sensors and actuators.",
+            id: "Emotion LED",
+            label: "Emotion LED",
+            projects: [
+              {
+                folder: "AlexyEnora",
+                title: "Capstone Design Film",
+                students: "Alexy Bonnet, Enora Piton",
+                description: "LED와 인터랙티브 요소로 감정을 표현한 캡스톤 영상 과제. / A capstone film project expressing emotion through LEDs and interactive elements.",
+              },
+              {
+                folder: "KangSujung-LeeSumin",
+                title: "LED Assignment",
+                students: "강수정 (20201551), 이수민 (20201571)",
+                description: "아두이노와 LED를 활용한 감정 표현 과제. / An LED-based emotion assignment using Arduino.",
+              },
+              {
+                folder: "Wicked",
+                title: "Wicked",
+                students: "",
+                description: "LED 인터랙션을 활용한 감정 표현 작업 'Wicked'. / An LED interaction piece titled 'Wicked'.",
+              },
+              {
+                folder: "InteractiveNoise",
+                title: "Interactive Noise",
+                students: "",
+                description: "소음·사운드에 반응하는 LED 인터랙션 작업. / An LED interaction piece that reacts to noise.",
+              },
+            ],
           },
           {
-            folder: "EscpaeRoom",
-            title: "Escape Room Project",
-            students: "",
-            description: "인터랙션 디자인 수업의 최종 과제로서, 방탈출 게임을 만드는 프로젝트이다. 학생들은 그룹 별로 방의 컨셉을 개발하고 3개의 인터랙티브 퀴즈를 만들어 방탈출 게임을 디자인한다. / As the final project of the Interaction Design course, students design an escape room game. Each group develops a room concept and creates three interactive quizzes for the escape room.",
+            id: "ProductDesign",
+            label: "Product Design",
+            projects: [
+              {
+                folder: "Overview",
+                title: "Mini Project Compilation",
+                students: "",
+                description: "인터랙션 디자인 기초를 익힌 후 아두이노와 기본 센서·액츄에이터를 활용해 일상 속 간단한 제품 아이디어를 제안한 미니 프로젝트 모음. / A compilation of mini projects where students apply interaction design fundamentals — Arduino with basic sensors and actuators — to simple everyday product ideas.",
+              },
+            ],
+          },
+          {
+            id: "EscpaeRoom",
+            label: "Escape Room",
+            projects: [
+              {
+                folder: "Overview",
+                title: "Designing Escape Room Quizzes with Arduino",
+                students: "KMU Industrial Design",
+                description: "인터랙션 디자인 수업의 최종 과제로 진행된 방탈출 프로젝트. 각 팀이 방의 컨셉을 개발하고 아두이노 기반 인터랙티브 퀴즈 3개를 만든 과정을 담은 영상. / Final project of the Interaction Design course: students design an escape room with three Arduino-based interactive puzzles. This video documents the teams and their rooms.",
+              },
+            ],
           },
         ],
       },

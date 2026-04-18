@@ -4,21 +4,57 @@
       "2022": {
         "images": [],
         "videos": [],
-        "projects": {
+        "projects": {},
+        "categories": {
+          "Emotion LED": {
+            "projects": {
+              "AlexyEnora": {
+                "slides": [],
+                "videos": [
+                  "/courses/interaction-design/2022/Emotion LED/AlexyEnora/capstone.mp4"
+                ]
+              },
+              "InteractiveNoise": {
+                "slides": [],
+                "videos": [
+                  "/courses/interaction-design/2022/Emotion LED/InteractiveNoise/interactive-noise.mp4"
+                ]
+              },
+              "KangSujung-LeeSumin": {
+                "slides": [],
+                "videos": [
+                  "/courses/interaction-design/2022/Emotion LED/KangSujung-LeeSumin/led-assignment.mp4"
+                ]
+              },
+              "Wicked": {
+                "slides": [],
+                "videos": [
+                  "/courses/interaction-design/2022/Emotion LED/Wicked/wicked.mp4"
+                ]
+              }
+            }
+          },
           "EscpaeRoom": {
-            "slides": [],
-            "videos": [
-              "/courses/interaction-design/2022/EscpaeRoom/Designing Escape Room Quizzes with Arduino (KMU _ Industrial Design).mp4"
-            ]
+            "projects": {
+              "Overview": {
+                "slides": [],
+                "videos": [
+                  "/courses/interaction-design/2022/EscpaeRoom/Overview/video.mp4"
+                ]
+              }
+            }
           },
           "ProductDesign": {
-            "slides": [],
-            "videos": [
-              "/courses/interaction-design/2022/ProductDesign/video.mp4"
-            ]
+            "projects": {
+              "Overview": {
+                "slides": [],
+                "videos": [
+                  "/courses/interaction-design/2022/ProductDesign/Overview/video.mp4"
+                ]
+              }
+            }
           }
-        },
-        "categories": {}
+        }
       },
       "2023": {
         "images": [],
