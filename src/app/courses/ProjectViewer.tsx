@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 type ProjectData = {
@@ -83,22 +83,125 @@ function SlideViewer({ slides, title }: { slides: string[]; title: string }) {
 }
 
 function SlideGrid({ slides, title }: { slides: string[]; title: string }) {
+  const [cols, setCols] = useState(3);
+  const [lightbox, setLightbox] = useState<number | null>(null);
+
+  const gridClass =
+    cols === 1
+      ? "grid-cols-1"
+      : cols === 2
+        ? "grid-cols-1 sm:grid-cols-2"
+        : cols === 3
+          ? "grid-cols-2 sm:grid-cols-2 md:grid-cols-3"
+          : "grid-cols-2 sm:grid-cols-3 md:grid-cols-4";
+
+  useEffect(() => {
+    if (lightbox === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightbox(null);
+      if (e.key === "ArrowLeft")
+        setLightbox((i) => (i === null ? null : (i - 1 + slides.length) % slides.length));
+      if (e.key === "ArrowRight")
+        setLightbox((i) => (i === null ? null : (i + 1) % slides.length));
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [lightbox, slides.length]);
+
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-      {slides.map((slide, i) => (
-        <div key={i} className="relative aspect-[16/9] bg-gray-100 rounded-sm overflow-hidden">
-          <Image
-            src={slide}
-            alt={`${title} — page ${i + 1}`}
-            fill
-            className="object-contain"
-            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-          />
-          <span className="absolute bottom-1 right-1 text-[10px] text-gray-500 bg-white/80 px-1 rounded">
-            {i + 1}
-          </span>
+    <div className="space-y-2">
+      <div className="flex items-center justify-end gap-2 text-xs text-gray-500">
+        <button
+          onClick={() => setCols((c) => Math.min(4, c + 1))}
+          disabled={cols === 4}
+          className="w-6 h-6 flex items-center justify-center border border-gray-300 rounded-sm hover:bg-gray-50 disabled:opacity-30 disabled:cursor-not-allowed"
+          aria-label="Zoom out"
+          title="Zoom out"
+        >
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14" /></svg>
+        </button>
+        <span className="tabular-nums">{cols} cols</span>
+        <button
+          onClick={() => setCols((c) => Math.max(1, c - 1))}
+          disabled={cols === 1}
+          className="w-6 h-6 flex items-center justify-center border border-gray-300 rounded-sm hover:bg-gray-50 disabled:opacity-30 disabled:cursor-not-allowed"
+          aria-label="Zoom in"
+          title="Zoom in"
+        >
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 5v14M5 12h14" /></svg>
+        </button>
+      </div>
+
+      <div className={`grid ${gridClass} gap-1`}>
+        {slides.map((slide, i) => (
+          <button
+            key={i}
+            onClick={() => setLightbox(i)}
+            className="relative aspect-[1/1.414] bg-gray-100 rounded-sm overflow-hidden group focus:outline-none focus:ring-2 focus:ring-black"
+          >
+            <Image
+              src={slide}
+              alt={`${title} — page ${i + 1}`}
+              fill
+              className="object-contain group-hover:opacity-90 transition-opacity"
+              sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, 33vw"
+            />
+            <span className="absolute bottom-1 right-1 text-[10px] text-gray-500 bg-white/80 px-1 rounded">
+              {i + 1}
+            </span>
+          </button>
+        ))}
+      </div>
+
+      {lightbox !== null && (
+        <div
+          onClick={() => setLightbox(null)}
+          className="fixed inset-0 z-50 bg-black/85 flex items-center justify-center p-4 animate-in fade-in duration-150"
+        >
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setLightbox((i) => (i === null ? null : (i - 1 + slides.length) % slides.length));
+            }}
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center"
+            aria-label="Previous page"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 18l-6-6 6-6" /></svg>
+          </button>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setLightbox((i) => (i === null ? null : (i + 1) % slides.length));
+            }}
+            className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center"
+            aria-label="Next page"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18l6-6-6-6" /></svg>
+          </button>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setLightbox(null);
+            }}
+            className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center"
+            aria-label="Close"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6L6 18M6 6l12 12" /></svg>
+          </button>
+          <div className="relative w-full h-full max-w-5xl" onClick={(e) => e.stopPropagation()}>
+            <Image
+              src={slides[lightbox]}
+              alt={`${title} — page ${lightbox + 1}`}
+              fill
+              className="object-contain"
+              sizes="100vw"
+            />
+            <span className="absolute bottom-2 left-1/2 -translate-x-1/2 text-xs text-white/80 bg-black/40 px-2 py-0.5 rounded">
+              {lightbox + 1} / {slides.length}
+            </span>
+          </div>
         </div>
-      ))}
+      )}
     </div>
   );
 }
