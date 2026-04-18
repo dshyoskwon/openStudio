@@ -1,8 +1,37 @@
 import Link from "next/link";
 import { courses } from "@/data/courses";
 
+const courseStyles: Record<string, { icon: string; bg: string; border: string }> = {
+  "interface-design": {
+    icon: "text-emerald-500",
+    bg: "bg-emerald-50 group-hover:bg-emerald-100",
+    border: "border-emerald-100",
+  },
+  "interaction-design": {
+    icon: "text-purple-500",
+    bg: "bg-purple-50 group-hover:bg-purple-100",
+    border: "border-purple-100",
+  },
+  "kmu-alpha": {
+    icon: "text-yellow-500",
+    bg: "bg-yellow-50 group-hover:bg-yellow-100",
+    border: "border-yellow-100",
+  },
+};
+
+function getCourseStyle(id: string) {
+  return (
+    courseStyles[id] ?? {
+      icon: "text-gray-700",
+      bg: "bg-gray-50 group-hover:bg-white",
+      border: "border-gray-100",
+    }
+  );
+}
+
 function CourseIcon({ id }: { id: string }) {
-  const base = "w-10 h-10 text-gray-700";
+  const { icon } = getCourseStyle(id);
+  const base = `w-10 h-10 ${icon}`;
   if (id === "interface-design") {
     return (
       <svg className={base} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -64,7 +93,9 @@ export default function CoursesPage() {
             className="group flex items-center gap-5 border border-gray-200 rounded-sm px-5 py-4 hover:bg-gray-50 transition-colors"
           >
             {/* Icon */}
-            <div className="w-20 h-20 rounded-sm bg-gray-50 border border-gray-100 flex items-center justify-center shrink-0 group-hover:bg-white transition-colors">
+            <div
+              className={`w-20 h-20 rounded-sm border flex items-center justify-center shrink-0 transition-colors ${getCourseStyle(course.id).bg} ${getCourseStyle(course.id).border}`}
+            >
               <CourseIcon id={course.id} />
             </div>
 
