@@ -418,12 +418,6 @@ export const courses: Course[] = [
                 students: "",
                 description: "외출 후 가스 밸브를 잠갔는지 반복적으로 불안해하는 문제를 풀기 위한 자동 가스 차단 시스템. 온습도 센서(DHT11)로 조리 종료를 감지하고, 서보 모터로 밸브를 자동으로 잠그며 LED로 상태를 알려준다. / An automatic gas shut-off system that relieves the familiar 'did I turn off the gas?' anxiety. A DHT11 sensor detects when cooking has ended, a servo motor locks the valve, and an LED indicates the device's state.",
               },
-              {
-                folder: "SmartLittleGardener",
-                title: "Smart Little Gardener",
-                students: "",
-                description: "토양 수분 센서와 서보 모터로 식물에 자동으로 물을 주는 스마트 화분. LED로 수분 부족 알림, 급수 시에는 피에조 부저로 멜로디를 재생해 사용자와의 감정적 인터랙션을 만든다. / A smart planter that automatically waters plants using a soil-moisture sensor and servo motor. An LED warns when the soil is dry and a piezo buzzer plays a melody during watering to create a small emotional connection with the user.",
-              },
             ],
           },
           {
