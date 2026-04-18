@@ -98,21 +98,23 @@ export default function CourseTabs({ course }: { course: CourseWithFiles }) {
           {course.type === "slideshow" && !activeData.figmaUrl && (
             categories.length > 0 ? (
               <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <label className="text-xs text-gray-500 uppercase tracking-wider">
-                    Category
-                  </label>
-                  <select
-                    value={activeCategory?.id ?? ""}
-                    onChange={(e) => setActiveCategoryId(e.target.value)}
-                    className="text-sm border border-gray-300 rounded-sm px-3 py-1.5 bg-white focus:outline-none focus:border-black"
-                  >
-                    {categories.map((c) => (
-                      <option key={c.id} value={c.id}>
-                        {c.label}
-                      </option>
-                    ))}
-                  </select>
+                <div className="flex gap-1 border-b border-gray-100">
+                  {categories.map((c) => (
+                    <button
+                      key={c.id}
+                      onClick={() => setActiveCategoryId(c.id)}
+                      className={`px-3 py-1.5 text-xs font-medium transition-colors relative ${
+                        activeCategory?.id === c.id
+                          ? "text-black"
+                          : "text-gray-400 hover:text-gray-600"
+                      }`}
+                    >
+                      {c.label}
+                      {activeCategory?.id === c.id && (
+                        <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-black" />
+                      )}
+                    </button>
+                  ))}
                 </div>
                 <ProjectViewer projects={activeCategory?.projects ?? []} />
               </div>
@@ -136,21 +138,23 @@ export default function CourseTabs({ course }: { course: CourseWithFiles }) {
                 </div>
               ) : categories.length > 0 ? (
                 <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <label className="text-xs text-gray-500 uppercase tracking-wider">
-                      Category
-                    </label>
-                    <select
-                      value={activeCategory?.id ?? ""}
-                      onChange={(e) => setActiveCategoryId(e.target.value)}
-                      className="text-sm border border-gray-300 rounded-sm px-3 py-1.5 bg-white focus:outline-none focus:border-black"
-                    >
-                      {categories.map((c) => (
-                        <option key={c.id} value={c.id}>
-                          {c.label}
-                        </option>
-                      ))}
-                    </select>
+                  <div className="flex gap-1 border-b border-gray-100">
+                    {categories.map((c) => (
+                      <button
+                        key={c.id}
+                        onClick={() => setActiveCategoryId(c.id)}
+                        className={`px-3 py-1.5 text-xs font-medium transition-colors relative ${
+                          activeCategory?.id === c.id
+                            ? "text-black"
+                            : "text-gray-400 hover:text-gray-600"
+                        }`}
+                      >
+                        {c.label}
+                        {activeCategory?.id === c.id && (
+                          <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-black" />
+                        )}
+                      </button>
+                    ))}
                   </div>
                   <ProjectViewer projects={activeCategory?.projects ?? []} />
                 </div>
