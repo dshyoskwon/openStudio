@@ -165,6 +165,14 @@ export default async function CourseDetailPage({
         <p className="text-sm text-gray-500 mt-2">{course.description}</p>
       </header>
 
+      {course.intro && course.intro.length > 0 && (
+        <section className="space-y-3 text-sm text-gray-700 leading-relaxed border-l-2 border-gray-200 pl-4">
+          {course.intro.map((paragraph, i) => (
+            <p key={i}>{paragraph}</p>
+          ))}
+        </section>
+      )}
+
       <CourseTabs course={courseData} />
 
       <Link

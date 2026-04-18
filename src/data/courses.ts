@@ -30,6 +30,7 @@ export type Course = {
   id: string;
   title: string;
   description: string;
+  intro?: string[]; // 긴 소개문 (문단별 배열)
   thumbnail?: string; // 썸네일 이미지 경로 (없으면 기본 placeholder)
   type: "slideshow" | "video" | "list";
   years: CourseYear[];
@@ -41,6 +42,10 @@ export const courses: Course[] = [
     title: "Interface Design",
     description:
       "인터페이스 디자인의 기초부터 심화까지, 학생들의 프로젝트 결과물을 소개합니다.",
+    intro: [
+      "User Interface (UI) Design is the design process that designers/engineers use to build interfaces in software or computerized devices, focusing on usability, functionality, as well as looks or style. Interface is an access point where users interact with the system, product, and service. Designers seek to create interfaces that users find easy to use and pleasurable. Moreover, UI design requires an understanding of the capabilities and desires of people and the kinds of technology that are available.",
+      "This lecture will introduce practical techniques to support students to conduct user research, design user scenario and storyboard, choose the right research method and prototyping method, plan pilot test and user test, collect data, and analyze data. The number of different types of up-to-date interfaces (e.g., Graphical User Interface, Voice User Interface, Gesture User Interface, Tangible User Interface, etc.) and applications available will be introduced in the series of lectures.",
+    ],
     type: "slideshow",
     years: [
       {
