@@ -323,7 +323,11 @@ export const courses: Course[] = [
     id: "interaction-design",
     title: "Interaction Design",
     description:
-      "인터랙션 디자인 수업의 결과물을 영상으로 소개합니다.",
+      "Physical Computing for designers — microcontrollers, sensors, and embedded computing behind everyday interactive products. Students prototype and test sensor-driven interactions, turning invisible computation into tangible, user-friendly experiences.",
+    intro: [
+      "This module will cover the basics of physical computing, which will become a powerful skill for designers in the 21st century. Computing is now an essential element in nearly every activity of our modern life. Interactive technology is increasingly woven into our everyday products. Not only smart devices (e.g. mobile phones, tablets) but also everyday objects such as bottles, bags, and table clocks are embedded with sensors and wireless connectivity. Some of them are very well designed that we don't even recognize them, still, the greater portion leads to a failure due to a lack of thorough consideration in user interaction design.",
+      "Therefore, it is important for designers to understand computing and sensor-driven interactions, as well as to be able to manipulate microcontrollers to build and test their ideas. Computation is invisible, but it is realized by physical manipulation of products, controllers, or screens. Perhaps, it is also the designers' role to materialize the embedded computing that enables users to easily make sense of the function and bring user-friendly interactive products.",
+    ],
     type: "video",
     years: [
       { year: "2026" },
