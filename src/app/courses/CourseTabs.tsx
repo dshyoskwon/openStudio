@@ -134,6 +134,26 @@ export default function CourseTabs({ course }: { course: CourseWithFiles }) {
                     allowFullScreen
                   />
                 </div>
+              ) : categories.length > 0 ? (
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <label className="text-xs text-gray-500 uppercase tracking-wider">
+                      Category
+                    </label>
+                    <select
+                      value={activeCategory?.id ?? ""}
+                      onChange={(e) => setActiveCategoryId(e.target.value)}
+                      className="text-sm border border-gray-300 rounded-sm px-3 py-1.5 bg-white focus:outline-none focus:border-black"
+                    >
+                      {categories.map((c) => (
+                        <option key={c.id} value={c.id}>
+                          {c.label}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <ProjectViewer projects={activeCategory?.projects ?? []} />
+                </div>
               ) : activeData.projects.length > 0 ? (
                 <ProjectViewer projects={activeData.projects} />
               ) : activeData.videos.length > 0 ? (

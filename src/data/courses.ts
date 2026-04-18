@@ -322,9 +322,184 @@ export const courses: Course[] = [
     type: "video",
     years: [
       { year: "2026" },
-      { year: "2025" },
-      { year: "2024" },
-      { year: "2023", label: "Team-Team Capstone" },
+      {
+        year: "2025",
+        categories: [
+          {
+            id: "Emotion LED",
+            label: "Emotion LED",
+            projects: [
+              {
+                folder: "ParkSeoyeon-Noisy",
+                title: "Noisy",
+                students: "박서연 (20241526)",
+                description: "소리(소음)에 반응하여 LED가 '시끄러움'을 시각적으로 표현하는 아두이노 기반 감정 표현 장치. / An Arduino-based emotion piece where the LED visualizes 'noisiness' in response to surrounding sound.",
+              },
+              {
+                folder: "AlexisChrzanowski-Crying",
+                title: "Crying",
+                students: "Alexis Chrzanowski",
+                description: "울음(슬픔)이라는 감정을 LED의 깜빡임과 리듬으로 표현한 인터랙티브 작업. / An interactive piece that expresses the emotion of crying through the blinking rhythm of an LED.",
+              },
+              {
+                folder: "KimJiYoon",
+                title: "Emotion LED — Kim Ji Yoon",
+                students: "김지윤 (20221569)",
+                description: "LED와 센서를 활용해 특정 감정을 표현하도록 설계한 인터랙티브 캡스톤 프로덕트 디자인 작업. / An interactive capstone product design piece that uses an LED and sensors to express a chosen emotion.",
+              },
+              {
+                folder: "EomJeongwoo",
+                title: "Emotion LED — Eom Jeongwoo",
+                students: "엄정우",
+                description: "감정의 상태 변화를 LED의 밝기·색·패턴으로 풀어낸 인터랙션 실험. / An interaction experiment that translates shifts in emotional state into changes in LED brightness, color, and pattern.",
+              },
+              {
+                folder: "JeonDabin-Nervous",
+                title: "Nervous",
+                students: "전다빈 (20230155)",
+                description: "긴장·불안(nervous) 감정을 LED의 떨림과 불규칙한 깜빡임으로 표현한 작업. / A piece that expresses nervousness and anxiety through jittery, irregular LED flicker.",
+              },
+            ],
+          },
+          {
+            id: "EscapeRoom",
+            label: "Escape Room",
+            projects: [
+              {
+                folder: "Gustave",
+                title: "Gustave's Secret (1944)",
+                students: "Anamaya Semy, Lucile Coudert, Emilie Ling",
+                description: "1944년 파리를 배경으로 한 편지와 비밀을 추적하는 스토리 기반 방탈출 프로젝트. 아두이노 기반 인터랙티브 퀴즈로 이야기가 진행된다. / A story-driven escape room set in 1944 Paris, tracing letters and hidden secrets. The narrative unfolds through Arduino-based interactive puzzles.",
+              },
+              {
+                folder: "minecraft",
+                title: "Save William — Minecraft Escape",
+                students: "",
+                description: "마인크래프트 세계관을 차용한 방탈출 프로젝트 'Save William'. 아두이노 퀴즈와 영상으로 스토리를 구성했다. / A Minecraft-themed escape room project ('Save William') built around Arduino puzzles and a supporting film.",
+              },
+              {
+                folder: "GrandTheftArduino",
+                title: "Grand Theft Arduino",
+                students: "",
+                description: "게임 'Grand Theft Auto'를 모티프로 한 아두이노 기반 방탈출 프로젝트. / An Arduino-based escape room project that riffs on the Grand Theft Auto franchise.",
+              },
+              {
+                folder: "TeamPlankton",
+                title: "Team Plankton",
+                students: "",
+                description: "스폰지밥의 'Plankton'을 테마로 한 방탈출 프로젝트. / An escape room project themed around SpongeBob's Plankton.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        year: "2024",
+        categories: [
+          {
+            id: "ProductDesign",
+            label: "Product Design",
+            projects: [
+              {
+                folder: "LeeYoungJi-ClappingLight",
+                title: "Clap-Activated Light System",
+                students: "이영지 (20200495)",
+                description: "사운드 센서와 LED, 아두이노를 이용해 박수 소리로 조명을 껐다 켤 수 있는 인터랙티브 조명 시스템. 핸즈프리 제어를 통해 편의성과 접근성을 높였다. / An interactive lighting system that uses a sound sensor, LED, and Arduino so the user can clap to toggle the light on and off — offering hands-free control for convenience and accessibility.",
+              },
+              {
+                folder: "HyunDonghee-BinocularLamp",
+                title: "Binocular Lamp",
+                students: "현동희 (20181747)",
+                description: "책상 위를 가볍게 두드리면 조명이 그 방향으로 기울어져 원하는 지점을 비춰주는 램프. 거울처럼 튀어나오는 빛 대신 정확히 필요한 곳만 밝히는 조명 경험을 제안한다. / A desk lamp that tilts toward wherever you tap, pointing the light exactly where you need it — so the lamp stops reflecting back into your eyes and starts illuminating the page.",
+              },
+              {
+                folder: "Best",
+                title: "Automatic Gas Valve Control System",
+                students: "",
+                description: "외출 후 가스 밸브를 잠갔는지 반복적으로 불안해하는 문제를 풀기 위한 자동 가스 차단 시스템. 온습도 센서(DHT11)로 조리 종료를 감지하고, 서보 모터로 밸브를 자동으로 잠그며 LED로 상태를 알려준다. / An automatic gas shut-off system that relieves the familiar 'did I turn off the gas?' anxiety. A DHT11 sensor detects when cooking has ended, a servo motor locks the valve, and an LED indicates the device's state.",
+              },
+              {
+                folder: "SmartLittleGardener",
+                title: "Smart Little Gardener",
+                students: "",
+                description: "토양 수분 센서와 서보 모터로 식물에 자동으로 물을 주는 스마트 화분. LED로 수분 부족 알림, 급수 시에는 피에조 부저로 멜로디를 재생해 사용자와의 감정적 인터랙션을 만든다. / A smart planter that automatically waters plants using a soil-moisture sensor and servo motor. An LED warns when the soil is dry and a piezo buzzer plays a melody during watering to create a small emotional connection with the user.",
+              },
+            ],
+          },
+          {
+            id: "EscapeRoom",
+            label: "Escape Room",
+            projects: [
+              {
+                folder: "SantaEscape",
+                title: "Santa Escape",
+                students: "",
+                description: "산타가 되어 탈출하는 크리스마스 테마 방탈출 프로젝트. 아두이노 기반 인터랙티브 퀴즈로 구성되어 있다. / A Christmas-themed escape room where you play Santa trying to escape, built around Arduino-based interactive puzzles.",
+              },
+              {
+                folder: "Team01",
+                title: "Interactive Capstone — Team 01",
+                students: "",
+                description: "학생 팀이 제작한 방탈출 프로젝트 영상. / Escape room project video created by a student team.",
+              },
+              {
+                folder: "Team02",
+                title: "Interactive Capstone — Team 02",
+                students: "",
+                description: "학생 팀이 제작한 방탈출 프로젝트 영상. / Escape room project video created by a student team.",
+              },
+              {
+                folder: "Team03",
+                title: "Interactive Capstone — Team 03",
+                students: "",
+                description: "학생 팀이 제작한 방탈출 프로젝트 영상. / Escape room project video created by a student team.",
+              },
+              {
+                folder: "Team04",
+                title: "Interactive Capstone — Team 04",
+                students: "",
+                description: "학생 팀이 제작한 방탈출 프로젝트 영상. / Escape room project video created by a student team.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        year: "2023",
+        label: "Team-Team Capstone",
+        projects: [
+          {
+            folder: "BalGeolEum",
+            title: "밝걸음 — 폐지 수거 노인 안전",
+            students: "구준혁, 김민준, 김태성, 박채은 (짜장면줘!! 팀)",
+            description: "폐지 줍는 어르신들이 주로 활동하는 새벽·야간 시간대의 교통사고 위험을 줄이기 위한 인터랙티브 안전 장치 프로젝트. 리어카와 작업자의 위치를 주변 차량에 알려 사고를 예방한다. / An interactive safety device project for elderly paper collectors who work during dawn and night hours. Makes the cart and the worker visible to passing vehicles to prevent traffic accidents.",
+          },
+          {
+            folder: "BalKida",
+            title: "안전을 밝키다 — 폐지 수거 어르신 서비스 전략",
+            students: "김다원, 김유진, 장세림, 정해진, 조서영 (Team D)",
+            description: "폐지 수거 어르신의 하루를 더 안전하게 만드는 서비스 전략 제안. 공업디자인학과 × 광고홍보학과 협업으로 안전 프로덕트와 홍보·인식 개선 캠페인을 함께 설계하였다. / A service strategy to make elderly paper collectors' days safer. A collaboration between Industrial Design and Advertising & Public Relations — pairing a safety product with an awareness campaign.",
+          },
+          {
+            folder: "Dolboca",
+            title: "DOLBOCAR — 나를 돌아볼 수 있는 작은 여유",
+            students: "김영서, 신지애, 정송희, 정연우 (Cutie Pie)",
+            description: "폐지 수거 어르신을 위한 맞춤형 리어카 제안. 적재·운반·안전 기능을 재설계하여 작업 효율을 높이고 어르신이 스스로를 돌볼 수 있는 여유를 만들어준다. 삼성화재와 협업하였다. / A redesigned cart for elderly paper collectors. Rethinks loading, transport, and safety features to reduce the physical load and give workers breathing room to care for themselves. A collaboration with Samsung Fire.",
+          },
+          {
+            folder: "GolmokGil5",
+            title: "골목길 5초 멈춤 캠페인",
+            students: "강승훈, 김혜원, 오민규, 장지예, 조인성 (5초만 멈춰조)",
+            description: "'리어카의 손짓이 보이면 5초 멈춰주세요' — 좁은 골목길에서 리어카와 차량의 충돌을 줄이기 위한 인터랙티브 캠페인. 장갑 신호·차량·주민이 함께 참여하는 5초 멈춤 문화를 만든다. 삼성화재와 협업하였다. / 'Stop for five seconds when you see the cart's hand signal.' An interactive campaign that reduces collisions between carts and cars in narrow alleys by building a five-second-stop culture that involves signal gloves, drivers, and residents. A collaboration with Samsung Fire.",
+          },
+          {
+            folder: "Wave",
+            title: "WAVE — 작은 물결이 큰 파도가 되다",
+            students: "김다정, 김수빈, 유지혜, 석다현",
+            description: "자원재생활동가(폐지 줍는 어르신)가 정당한 노동자로 인정받을 수 있도록 제도와 인식을 바꾸는 캠페인·서비스 제안. 공업디자인학과 × 정치외교학과 협업으로, 서울특별시·삼성화재와 함께 진행되었다. / A campaign and service proposal to have recycling activists (elderly paper collectors) recognized as legitimate workers — shifting both policy and public perception. A collaboration between Industrial Design and Political Science & Diplomacy, with Seoul City and Samsung Fire.",
+          },
+        ],
+      },
       {
         year: "2022",
         students: "강병찬, 장현수, 강병준, 신수범, 원가은, 풍제석, 성기종, 강진서, 박채린, 임영현, 이민선, 강수정, 신찬희, 이수민, 이은수, 보넷 알렉시, 피톤 에노라, 곤잘레스 위니 다니엘라, 데 라 자마 세포라",

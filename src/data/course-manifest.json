@@ -11,10 +11,10 @@
               "/courses/interaction-design/2022/EscpaeRoom/Designing Escape Room Quizzes with Arduino (KMU _ Industrial Design).mp4"
             ]
           },
-          "Mini-Project": {
+          "ProductDesign": {
             "slides": [],
             "videos": [
-              "/courses/interaction-design/2022/Mini-Project/video.mp4"
+              "/courses/interaction-design/2022/ProductDesign/video.mp4"
             ]
           }
         },
@@ -22,38 +22,337 @@
       },
       "2023": {
         "images": [],
-        "videos": [
-          "/courses/interaction-design/2023/wave영상.mp4",
-          "/courses/interaction-design/2023/골목길5초멈춤_영상.mp4",
-          "/courses/interaction-design/2023/돌보카_영상.mp4",
-          "/courses/interaction-design/2023/밝걸음팀 영상.mp4",
-          "/courses/interaction-design/2023/안전을 밝키다_영상.mp4"
-        ],
-        "projects": {},
+        "videos": [],
+        "projects": {
+          "BalGeolEum": {
+            "slides": [
+              "/courses/interaction-design/2023/BalGeolEum/slide-01.jpg",
+              "/courses/interaction-design/2023/BalGeolEum/slide-02.jpg",
+              "/courses/interaction-design/2023/BalGeolEum/slide-03.jpg",
+              "/courses/interaction-design/2023/BalGeolEum/slide-04.jpg",
+              "/courses/interaction-design/2023/BalGeolEum/slide-05.jpg",
+              "/courses/interaction-design/2023/BalGeolEum/slide-06.jpg",
+              "/courses/interaction-design/2023/BalGeolEum/slide-07.jpg",
+              "/courses/interaction-design/2023/BalGeolEum/slide-08.jpg",
+              "/courses/interaction-design/2023/BalGeolEum/slide-09.jpg",
+              "/courses/interaction-design/2023/BalGeolEum/slide-10.jpg",
+              "/courses/interaction-design/2023/BalGeolEum/slide-11.jpg",
+              "/courses/interaction-design/2023/BalGeolEum/slide-12.jpg",
+              "/courses/interaction-design/2023/BalGeolEum/slide-13.jpg",
+              "/courses/interaction-design/2023/BalGeolEum/slide-14.jpg",
+              "/courses/interaction-design/2023/BalGeolEum/slide-15.jpg",
+              "/courses/interaction-design/2023/BalGeolEum/slide-16.jpg",
+              "/courses/interaction-design/2023/BalGeolEum/slide-17.jpg",
+              "/courses/interaction-design/2023/BalGeolEum/slide-18.jpg",
+              "/courses/interaction-design/2023/BalGeolEum/slide-19.jpg",
+              "/courses/interaction-design/2023/BalGeolEum/slide-20.jpg"
+            ],
+            "videos": [
+              "/courses/interaction-design/2023/BalGeolEum/밝걸음팀 영상.mp4"
+            ]
+          },
+          "BalKida": {
+            "slides": [
+              "/courses/interaction-design/2023/BalKida/slide-01.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-02.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-03.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-04.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-05.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-06.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-07.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-08.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-09.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-10.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-11.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-12.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-13.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-14.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-15.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-16.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-17.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-18.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-19.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-20.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-21.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-22.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-23.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-24.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-25.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-26.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-27.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-28.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-29.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-30.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-31.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-32.jpg",
+              "/courses/interaction-design/2023/BalKida/slide-33.jpg"
+            ],
+            "videos": [
+              "/courses/interaction-design/2023/BalKida/안전을 밝키다_영상.mp4"
+            ]
+          },
+          "Dolboca": {
+            "slides": [
+              "/courses/interaction-design/2023/Dolboca/slide-01.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-02.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-03.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-04.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-05.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-06.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-07.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-08.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-09.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-10.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-11.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-12.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-13.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-14.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-15.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-16.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-17.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-18.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-19.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-20.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-21.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-22.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-23.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-24.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-25.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-26.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-27.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-28.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-29.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-30.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-31.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-32.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-33.jpg",
+              "/courses/interaction-design/2023/Dolboca/slide-34.jpg"
+            ],
+            "videos": [
+              "/courses/interaction-design/2023/Dolboca/돌보카_영상.mp4"
+            ]
+          },
+          "GolmokGil5": {
+            "slides": [
+              "/courses/interaction-design/2023/GolmokGil5/slide-01.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-02.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-03.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-04.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-05.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-06.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-07.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-08.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-09.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-10.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-11.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-12.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-13.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-14.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-15.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-16.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-17.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-18.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-19.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-20.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-21.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-22.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-23.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-24.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-25.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-26.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-27.jpg",
+              "/courses/interaction-design/2023/GolmokGil5/slide-28.jpg"
+            ],
+            "videos": [
+              "/courses/interaction-design/2023/GolmokGil5/골목길5초멈춤_영상.mp4"
+            ]
+          },
+          "Wave": {
+            "slides": [
+              "/courses/interaction-design/2023/Wave/slide-01.jpg",
+              "/courses/interaction-design/2023/Wave/slide-02.jpg",
+              "/courses/interaction-design/2023/Wave/slide-03.jpg",
+              "/courses/interaction-design/2023/Wave/slide-04.jpg",
+              "/courses/interaction-design/2023/Wave/slide-05.jpg",
+              "/courses/interaction-design/2023/Wave/slide-06.jpg",
+              "/courses/interaction-design/2023/Wave/slide-07.jpg",
+              "/courses/interaction-design/2023/Wave/slide-08.jpg",
+              "/courses/interaction-design/2023/Wave/slide-09.jpg",
+              "/courses/interaction-design/2023/Wave/slide-10.jpg",
+              "/courses/interaction-design/2023/Wave/slide-11.jpg",
+              "/courses/interaction-design/2023/Wave/slide-12.jpg",
+              "/courses/interaction-design/2023/Wave/slide-13.jpg",
+              "/courses/interaction-design/2023/Wave/slide-14.jpg",
+              "/courses/interaction-design/2023/Wave/slide-15.jpg",
+              "/courses/interaction-design/2023/Wave/slide-16.jpg",
+              "/courses/interaction-design/2023/Wave/slide-17.jpg",
+              "/courses/interaction-design/2023/Wave/slide-18.jpg",
+              "/courses/interaction-design/2023/Wave/slide-19.jpg",
+              "/courses/interaction-design/2023/Wave/slide-20.jpg"
+            ],
+            "videos": [
+              "/courses/interaction-design/2023/Wave/wave영상.mp4"
+            ]
+          }
+        },
         "categories": {}
       },
       "2024": {
         "images": [],
         "videos": [],
         "projects": {},
-        "categories": {}
+        "categories": {
+          "EscapeRoom": {
+            "projects": {
+              "SantaEscape": {
+                "slides": [],
+                "videos": [
+                  "/courses/interaction-design/2024/EscapeRoom/SantaEscape/santa-escape.mp4"
+                ]
+              },
+              "Team01": {
+                "slides": [],
+                "videos": [
+                  "/courses/interaction-design/2024/EscapeRoom/Team01/interactive capstone.mp4"
+                ]
+              },
+              "Team02": {
+                "slides": [],
+                "videos": [
+                  "/courses/interaction-design/2024/EscapeRoom/Team02/project.mp4"
+                ]
+              },
+              "Team03": {
+                "slides": [],
+                "videos": [
+                  "/courses/interaction-design/2024/EscapeRoom/Team03/IMG_0246.MOV"
+                ]
+              },
+              "Team04": {
+                "slides": [],
+                "videos": [
+                  "/courses/interaction-design/2024/EscapeRoom/Team04/KakaoTalk_20241217_110317094.mp4"
+                ]
+              }
+            }
+          },
+          "ProductDesign": {
+            "projects": {
+              "Best": {
+                "slides": [
+                  "/courses/interaction-design/2024/ProductDesign/Best/slide-1.jpg",
+                  "/courses/interaction-design/2024/ProductDesign/Best/slide-2.jpg"
+                ],
+                "videos": [
+                  "/courses/interaction-design/2024/ProductDesign/Best/best.mp4"
+                ]
+              },
+              "HyunDonghee-BinocularLamp": {
+                "slides": [
+                  "/courses/interaction-design/2024/ProductDesign/HyunDonghee-BinocularLamp/slide-1.jpg",
+                  "/courses/interaction-design/2024/ProductDesign/HyunDonghee-BinocularLamp/slide-2.jpg",
+                  "/courses/interaction-design/2024/ProductDesign/HyunDonghee-BinocularLamp/slide-3.jpg",
+                  "/courses/interaction-design/2024/ProductDesign/HyunDonghee-BinocularLamp/slide-4.jpg",
+                  "/courses/interaction-design/2024/ProductDesign/HyunDonghee-BinocularLamp/slide-5.jpg"
+                ],
+                "videos": []
+              },
+              "LeeYoungJi-ClappingLight": {
+                "slides": [
+                  "/courses/interaction-design/2024/ProductDesign/LeeYoungJi-ClappingLight/slide-1.jpg",
+                  "/courses/interaction-design/2024/ProductDesign/LeeYoungJi-ClappingLight/slide-2.jpg",
+                  "/courses/interaction-design/2024/ProductDesign/LeeYoungJi-ClappingLight/slide-3.jpg",
+                  "/courses/interaction-design/2024/ProductDesign/LeeYoungJi-ClappingLight/slide-4.jpg"
+                ],
+                "videos": [
+                  "/courses/interaction-design/2024/ProductDesign/LeeYoungJi-ClappingLight/clapping-light.mp4"
+                ]
+              },
+              "SmartLittleGardener": {
+                "slides": [
+                  "/courses/interaction-design/2024/ProductDesign/SmartLittleGardener/slide-1.jpg",
+                  "/courses/interaction-design/2024/ProductDesign/SmartLittleGardener/slide-2.jpg"
+                ],
+                "videos": []
+              }
+            }
+          }
+        }
       },
       "2025": {
         "images": [],
         "videos": [],
-        "projects": {
+        "projects": {},
+        "categories": {
           "Emotion LED": {
-            "slides": [],
-            "videos": [
-              "/courses/interaction-design/2025/Emotion LED/20241526박서연_Noisy.mp4",
-              "/courses/interaction-design/2025/Emotion LED/Alexis Chrzanowski crying .mp4",
-              "/courses/interaction-design/2025/Emotion LED/Interactive_Capstone_Product_Design_20221569_KimJiYoon.mp4",
-              "/courses/interaction-design/2025/Emotion LED/엄정우.mov",
-              "/courses/interaction-design/2025/Emotion LED/전다빈_202301555_led_nervous.mp4"
-            ]
+            "projects": {
+              "AlexisChrzanowski-Crying": {
+                "slides": [],
+                "videos": [
+                  "/courses/interaction-design/2025/Emotion LED/AlexisChrzanowski-Crying/Alexis Chrzanowski crying .mp4"
+                ]
+              },
+              "EomJeongwoo": {
+                "slides": [],
+                "videos": [
+                  "/courses/interaction-design/2025/Emotion LED/EomJeongwoo/엄정우.mov"
+                ]
+              },
+              "JeonDabin-Nervous": {
+                "slides": [],
+                "videos": [
+                  "/courses/interaction-design/2025/Emotion LED/JeonDabin-Nervous/전다빈_202301555_led_nervous.mp4"
+                ]
+              },
+              "KimJiYoon": {
+                "slides": [],
+                "videos": [
+                  "/courses/interaction-design/2025/Emotion LED/KimJiYoon/Interactive_Capstone_Product_Design_20221569_KimJiYoon.mp4"
+                ]
+              },
+              "ParkSeoyeon-Noisy": {
+                "slides": [],
+                "videos": [
+                  "/courses/interaction-design/2025/Emotion LED/ParkSeoyeon-Noisy/20241526박서연_Noisy.mp4"
+                ]
+              }
+            }
+          },
+          "EscapeRoom": {
+            "projects": {
+              "Gustave": {
+                "slides": [
+                  "/courses/interaction-design/2025/EscapeRoom/Gustave/slide-01.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/Gustave/slide-02.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/Gustave/slide-03.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/Gustave/slide-04.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/Gustave/slide-05.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/Gustave/slide-06.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/Gustave/slide-07.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/Gustave/slide-08.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/Gustave/slide-09.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/Gustave/slide-10.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/Gustave/slide-11.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/Gustave/slide-12.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/Gustave/slide-13.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/Gustave/slide-14.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/Gustave/slide-15.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/Gustave/slide-16.jpg"
+                ],
+                "videos": [
+                  "/courses/interaction-design/2025/EscapeRoom/Gustave/GUSTAVE.mp4"
+                ]
+              },
+              "minecraft": {
+                "slides": [],
+                "videos": [
+                  "/courses/interaction-design/2025/EscapeRoom/minecraft/Storymovie.mp4",
+                  "/courses/interaction-design/2025/EscapeRoom/minecraft/fullvideo.mp4"
+                ]
+              }
+            }
           }
-        },
-        "categories": {}
+        }
       },
       "2026": {
         "images": [],
