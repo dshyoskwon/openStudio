@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Slideshow from "./Slideshow";
 import ProjectViewer from "./ProjectViewer";
+import ProductDesign2024 from "./ProductDesign2024";
 
 type ProjectWithSlides = {
   title: string;
@@ -156,7 +157,13 @@ export default function CourseTabs({ course }: { course: CourseWithFiles }) {
                       </button>
                     ))}
                   </div>
-                  <ProjectViewer projects={activeCategory?.projects ?? []} />
+                  {course.id === "interaction-design" &&
+                  activeYear === "2024" &&
+                  activeCategory?.id === "ProductDesign" ? (
+                    <ProductDesign2024 />
+                  ) : (
+                    <ProjectViewer projects={activeCategory?.projects ?? []} />
+                  )}
                 </div>
               ) : activeData.projects.length > 0 ? (
                 <ProjectViewer projects={activeData.projects} />
