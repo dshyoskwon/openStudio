@@ -40,7 +40,10 @@ type CourseWithFiles = {
 };
 
 export default function CourseTabs({ course }: { course: CourseWithFiles }) {
-  const [activeYear, setActiveYear] = useState(course.yearsWithFiles[0]?.year);
+  const defaultYear =
+    course.yearsWithFiles.find((y) => y.year === "2025")?.year ??
+    course.yearsWithFiles[0]?.year;
+  const [activeYear, setActiveYear] = useState(defaultYear);
   const activeData = course.yearsWithFiles.find((y) => y.year === activeYear);
   const categories = activeData?.categories ?? [];
   const [activeCategoryId, setActiveCategoryId] = useState<string | null>(
