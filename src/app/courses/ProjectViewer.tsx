@@ -232,18 +232,80 @@ function ProjectCard({ project }: { project: ProjectData }) {
       )}
 
       {/* Video */}
-      {project.videos.map((video, i) => (
-        <div key={i} className="px-4 pb-2">
-          <div className="aspect-video rounded-sm overflow-hidden bg-black">
-            <video
-              src={video}
-              controls
-              className="w-full h-full"
-              preload="metadata"
-            />
-          </div>
+      {project.videos.length > 0 && (
+        <div className="px-4 pb-4 pt-2">
+          <VideoNavigator videos={project.videos} />
         </div>
-      ))}
+      )}
+    </div>
+  );
+}
+
+function VideoNavigator({ videos }: { videos: string[] }) {
+  const [current, setCurrent] = useState(0);
+  const total = videos.length;
+
+  if (total === 1) {
+    return (
+      <div className="aspect-video rounded-sm overflow-hidden bg-black">
+        <video
+          src={videos[0]}
+          controls
+          className="w-full h-full"
+          preload="metadata"
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-2">
+      <div className="relative group bg-black rounded-sm overflow-hidden">
+        <div className="aspect-video">
+          <video
+            key={current}
+            src={videos[current]}
+            controls
+            className="w-full h-full"
+            preload="metadata"
+          />
+        </div>
+        <button
+          onClick={() => setCurrent((i) => (i - 1 + total) % total)}
+          className="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/40 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black/60"
+          aria-label="Previous video"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 18l-6-6 6-6" /></svg>
+        </button>
+        <button
+          onClick={() => setCurrent((i) => (i + 1) % total)}
+          className="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/40 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black/60"
+          aria-label="Next video"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18l6-6-6-6" /></svg>
+        </button>
+      </div>
+      <div className="flex items-center justify-between px-1">
+        <span className="text-xs text-gray-400">
+          Video {current + 1} / {total}
+        </span>
+        <div className="flex gap-1">
+          {videos.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`w-6 h-6 rounded-sm text-[10px] font-medium transition-colors ${
+                i === current
+                  ? "bg-black text-white"
+                  : "bg-gray-100 text-gray-500 hover:bg-gray-200"
+              }`}
+              aria-label={`Video ${i + 1}`}
+            >
+              {i + 1}
+            </button>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

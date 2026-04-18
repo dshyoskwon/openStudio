@@ -308,6 +308,23 @@
           },
           "EscapeRoom": {
             "projects": {
+              "GrandTheftArduino": {
+                "slides": [
+                  "/courses/interaction-design/2025/EscapeRoom/GrandTheftArduino/slide-1.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/GrandTheftArduino/slide-2.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/GrandTheftArduino/slide-3.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/GrandTheftArduino/slide-4.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/GrandTheftArduino/slide-5.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/GrandTheftArduino/slide-6.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/GrandTheftArduino/slide-7.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/GrandTheftArduino/slide-8.jpg"
+                ],
+                "videos": [
+                  "/courses/interaction-design/2025/EscapeRoom/GrandTheftArduino/media1.mp4",
+                  "/courses/interaction-design/2025/EscapeRoom/GrandTheftArduino/media2.mp4",
+                  "/courses/interaction-design/2025/EscapeRoom/GrandTheftArduino/media3.mp4"
+                ]
+              },
               "Gustave": {
                 "slides": [
                   "/courses/interaction-design/2025/EscapeRoom/Gustave/slide-01.jpg",
@@ -329,6 +346,34 @@
                 ],
                 "videos": [
                   "/courses/interaction-design/2025/EscapeRoom/Gustave/GUSTAVE.mp4"
+                ]
+              },
+              "TeamPlankton": {
+                "slides": [
+                  "/courses/interaction-design/2025/EscapeRoom/TeamPlankton/slide-01.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/TeamPlankton/slide-02.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/TeamPlankton/slide-03.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/TeamPlankton/slide-04.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/TeamPlankton/slide-05.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/TeamPlankton/slide-06.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/TeamPlankton/slide-07.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/TeamPlankton/slide-08.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/TeamPlankton/slide-09.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/TeamPlankton/slide-10.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/TeamPlankton/slide-11.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/TeamPlankton/slide-12.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/TeamPlankton/slide-13.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/TeamPlankton/slide-14.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/TeamPlankton/slide-15.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/TeamPlankton/slide-16.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/TeamPlankton/slide-17.jpg",
+                  "/courses/interaction-design/2025/EscapeRoom/TeamPlankton/slide-18.jpg"
+                ],
+                "videos": [
+                  "/courses/interaction-design/2025/EscapeRoom/TeamPlankton/media1.mp4",
+                  "/courses/interaction-design/2025/EscapeRoom/TeamPlankton/media2.mp4",
+                  "/courses/interaction-design/2025/EscapeRoom/TeamPlankton/media3.mp4",
+                  "/courses/interaction-design/2025/EscapeRoom/TeamPlankton/media4.mp4"
                 ]
               },
               "minecraft": {
