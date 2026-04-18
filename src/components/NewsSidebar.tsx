@@ -1,11 +1,9 @@
 import Link from "next/link";
-import { newsItems } from "@/data/news";
+import { fetchNewsFromNotion } from "@/lib/notion";
 
-export default function NewsSidebar() {
-  // 날짜 기준 내림차순 정렬 (최근 항목이 가장 위로)
-  const sortedNews = [...newsItems].sort((a, b) =>
-    b.date.localeCompare(a.date)
-  );
+export default async function NewsSidebar() {
+  const items = await fetchNewsFromNotion();
+  const sortedNews = [...items].sort((a, b) => b.date.localeCompare(a.date));
 
   return (
     <aside className="h-full">
