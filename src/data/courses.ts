@@ -437,20 +437,8 @@ export const courses: Course[] = [
                 description: "산타가 되어 탈출하는 크리스마스 테마 방탈출 프로젝트. 아두이노 기반 인터랙티브 퀴즈로 구성되어 있다. / A Christmas-themed escape room where you play Santa trying to escape, built around Arduino-based interactive puzzles.",
               },
               {
-                folder: "Team01",
-                title: "Interactive Capstone — Team 01",
-                students: "",
-                description: "학생 팀이 제작한 방탈출 프로젝트 영상. / Escape room project video created by a student team.",
-              },
-              {
                 folder: "Team02",
                 title: "Interactive Capstone — Team 02",
-                students: "",
-                description: "학생 팀이 제작한 방탈출 프로젝트 영상. / Escape room project video created by a student team.",
-              },
-              {
-                folder: "Team03",
-                title: "Interactive Capstone — Team 03",
                 students: "",
                 description: "학생 팀이 제작한 방탈출 프로젝트 영상. / Escape room project video created by a student team.",
               },
