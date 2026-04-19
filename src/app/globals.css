@@ -1,31 +1,42 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --ors-paper:  #FAFBFD;
-  --ors-ink:    #15181F;
-  --ors-accent: #3556F3;
-  --ors-hot:    #FF6A3D;
+  /* neutrals */
+  --ors-ink:    oklch(18% 0.02 250);
+  --ors-ink-2:  oklch(32% 0.02 250);
+  --ors-ink-3:  oklch(50% 0.015 250);
+  --ors-rule:   oklch(90% 0.008 250);
+  --ors-paper:  oklch(98% 0.006 250);
+  --ors-paper-2: oklch(96% 0.008 250);
+
+  /* brand — Accent 187°, Hot 324° */
+  --ors-accent:     oklch(64% 0.22 187);
+  --ors-accent-2:   oklch(92% 0.06 187);
+  --ors-accent-ink: oklch(34% 0.14 187);
+  --ors-hot:        oklch(72% 0.22 324);
 }
 
-body {
-  color: var(--ors-ink);
+html, body {
   background: var(--ors-paper);
-  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  color: var(--ors-ink);
+  font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Pulsing "live" dot — used on the Now eyebrow */
-@keyframes ors-pulse {
-  0%, 100% { transform: scale(1);   opacity: 1;   }
-  50%      { transform: scale(1.4); opacity: .4; }
+/* verb-cycle entrance */
+@keyframes wordIn {
+  from { transform: translateY(100%); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
 }
-.ors-pulse { animation: ors-pulse 1.6s infinite; }
+.animate-wordIn { animation: wordIn .5s ease both; }
 
-@layer utilities {
-  .text-balance { text-wrap: balance; }
+/* pulse dot */
+@keyframes pulseDot {
+  0%,100% { transform: scale(1);   opacity: 1; }
+  50%       { transform: scale(1.6); opacity: .35; }
 }
+.animate-pulse-dot { animation: pulseDot 1.6s infinite; }
