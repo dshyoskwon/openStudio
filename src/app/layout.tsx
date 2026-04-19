@@ -4,8 +4,19 @@ import Navigation from "@/components/Navigation";
 import NewsSidebar from "@/components/NewsSidebar";
 
 export const metadata: Metadata = {
-  title: "Open Research Studio",
-  description: "A participatory research and production studio for design, technology, AI, and interaction.",
+  title: "ORS · Open Research Studio",
+  description: "A project-based studio for HCI, UX, interaction design, and physical AI. Kookmin University, Seoul.",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  openGraph: {
+    title: "ORS · Open Research Studio",
+    description: "Participate, make, research, experiment, grow.",
+    images: ["/og.png"],
+  },
 };
 
 export default function RootLayout({
@@ -15,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className="min-h-screen flex flex-col md:flex-row bg-white text-black antialiased">
+      <body className="min-h-screen flex flex-col md:flex-row bg-ors-paper text-ors-ink font-sans antialiased">
         {/* Left: Navigation */}
         <header className="w-full md:w-56 flex-shrink-0 p-6 md:h-screen md:sticky md:top-0 border-b md:border-b-0 md:border-r border-gray-100">
           <Navigation />
