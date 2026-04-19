@@ -1,25 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 255, 255, 255;
+  --ors-paper:  #FAFBFD;
+  --ors-ink:    #15181F;
+  --ors-accent: #3556F3;
+  --ors-hot:    #FF6A3D;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ors-ink);
+  background: var(--ors-paper);
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Pulsing "live" dot — used on the Now eyebrow */
+@keyframes ors-pulse {
+  0%, 100% { transform: scale(1);   opacity: 1;   }
+  50%      { transform: scale(1.4); opacity: .4; }
 }
+.ors-pulse { animation: ors-pulse 1.6s infinite; }
 
-
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+}
