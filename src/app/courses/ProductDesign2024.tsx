@@ -28,7 +28,7 @@ const projects: Project[] = [
   {
     id: "Best",
     title: "Automatic Gas Valve Control System",
-    student: "Siwoo Kim",
+    student: "",
     tagline:
       "An auto-locking gas valve system that removes the anxiety of \"did I turn it off?\"",
     intro:
@@ -68,7 +68,7 @@ const projects: Project[] = [
   {
     id: "HyunDonghee-BinocularLamp",
     title: "Binocular Lamp",
-    student: "Donghee Hyun (20181747)",
+    student: "",
     tagline: "A tap-to-aim desk lamp that points the light exactly where you need it.",
     intro:
       "You have probably had a desk lamp whose light reflects off the page and straight into your eyes, forcing you to awkwardly tilt the lamp or the book just to read one line. Instead of illuminating the book, the lamp acts like a mirror. What if a gentle tap on the desk was enough to redirect the light to that exact spot?",
@@ -91,7 +91,7 @@ const projects: Project[] = [
   {
     id: "LeeYoungJi-ClappingLight",
     title: "Clap-Activated Light System Using Arduino",
-    student: "Youngji Lee (20200495)",
+    student: "",
     tagline: "Hands-free lighting you can toggle with a clap.",
     intro:
       "An interactive lighting system that uses a sound sensor, an LED, and an Arduino board so the user can clap to toggle the light on and off. The project explores Arduino programming for interactive systems, with a focus on hands-free control for convenience and accessibility.",
