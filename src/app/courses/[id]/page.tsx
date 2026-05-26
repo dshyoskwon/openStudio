@@ -95,6 +95,7 @@ export default async function CourseDetailPage({
       students: string;
       description: string;
       layout?: "default" | "grid";
+      showSlides?: number[];
     }[],
     manifestProjects: Record<string, ManifestProject>,
   ) => {
@@ -105,11 +106,18 @@ export default async function CourseDetailPage({
     return folderNames.map((folder) => {
       const meta = metaList.find((m) => m.folder === folder);
       const files = manifestProjects[folder];
+      // Filter slides by showSlides (1-based indices)
+      let slides = files.slides;
+      if (meta?.showSlides && meta.showSlides.length > 0) {
+        slides = meta.showSlides
+          .map((n) => files.slides[n - 1])
+          .filter(Boolean);
+      }
       return {
         title: meta?.title || folder.replace(/[-_]/g, " "),
-        students: meta?.students || "",
+        students: "", // 익명화: 학생 이름 표시하지 않음
         description: meta?.description || "",
-        slides: files.slides,
+        slides,
         videos: files.videos,
         layout: meta?.layout,
       };
@@ -148,6 +156,7 @@ export default async function CourseDetailPage({
 
       return {
         ...y,
+        students: "", // 익명화: 연도별 학생 목록 표시하지 않음
         images: yearFiles.images,
         videos: yearFiles.videos,
         projects: projectsWithSlides,
