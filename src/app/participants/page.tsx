@@ -120,7 +120,7 @@ export default function ParticipantsPage() {
                   />
                 </div>
                 <h3 className="font-bold">Jae-Hyouk Sung</h3>
-                <p className="text-xs text-gray-500">Researcher / Professor</p>
+                <p className="text-xs text-gray-500">Co-PI / Professor</p>
               </div>
             )}
 
