@@ -177,6 +177,8 @@ export default function CourseTabs({ course }: { course: CourseWithFiles }) {
                       <video
                         src={video}
                         controls
+                        controlsList="nodownload"
+                        onContextMenu={(e) => e.preventDefault()}
                         className="w-full h-full"
                         preload="metadata"
                       />

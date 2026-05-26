@@ -258,6 +258,8 @@ function ProjectCard({ project }: { project: Project }) {
               <video
                 src={project.videoSrc}
                 controls
+                controlsList="nodownload"
+                onContextMenu={(e) => e.preventDefault()}
                 className="w-full h-full"
                 preload="metadata"
               />

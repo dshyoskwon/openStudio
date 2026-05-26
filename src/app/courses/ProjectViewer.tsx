@@ -251,6 +251,8 @@ function VideoNavigator({ videos }: { videos: string[] }) {
         <video
           src={videos[0]}
           controls
+          controlsList="nodownload"
+          onContextMenu={(e) => e.preventDefault()}
           className="w-full h-full"
           preload="metadata"
         />
@@ -266,6 +268,8 @@ function VideoNavigator({ videos }: { videos: string[] }) {
             key={current}
             src={videos[current]}
             controls
+            controlsList="nodownload"
+            onContextMenu={(e) => e.preventDefault()}
             className="w-full h-full"
             preload="metadata"
           />
