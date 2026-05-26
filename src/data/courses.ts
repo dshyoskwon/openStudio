@@ -321,7 +321,7 @@ export const courses: Course[] = [
   },
   {
     id: "interaction-design",
-    title: "Interaction Design",
+    title: "Interaction Design (Interactive Capstone Product Design)",
     description:
       "Physical Computing for designers — microcontrollers, sensors, and embedded computing behind everyday interactive products. Students prototype and test sensor-driven interactions, turning invisible computation into tangible, user-friendly experiences.",
     intro: [
@@ -551,6 +551,17 @@ export const courses: Course[] = [
           },
         ],
       },
+    ],
+  },
+  {
+    id: "robot-ux-design",
+    title: "Robot UX Design",
+    description:
+      "로봇 사용자 경험 디자인 수업의 결과물을 소개합니다.",
+    type: "video",
+    years: [
+      { year: "2026" },
+      { year: "2025" },
     ],
   },
 ];

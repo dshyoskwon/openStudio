@@ -12,6 +12,11 @@ const courseStyles: Record<string, { icon: string; bg: string; border: string }>
     bg: "bg-purple-50 group-hover:bg-purple-100",
     border: "border-purple-100",
   },
+  "robot-ux-design": {
+    icon: "text-blue-500",
+    bg: "bg-blue-50 group-hover:bg-blue-100",
+    border: "border-blue-100",
+  },
   "kmu-alpha": {
     icon: "text-yellow-500",
     bg: "bg-yellow-50 group-hover:bg-yellow-100",
@@ -48,6 +53,19 @@ function CourseIcon({ id }: { id: string }) {
       <svg className={base} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M2 12c2-3 4-3 6 0s4 3 6 0 4-3 6 0" />
         <circle cx="12" cy="18" r="1.5" />
+      </svg>
+    );
+  }
+  if (id === "robot-ux-design") {
+    return (
+      <svg className={base} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="5" y="9" width="14" height="10" rx="2" />
+        <circle cx="9" cy="14" r="1.5" />
+        <circle cx="15" cy="14" r="1.5" />
+        <path d="M12 4v3" />
+        <circle cx="12" cy="3" r="1" />
+        <path d="M3 13h2" />
+        <path d="M19 13h2" />
       </svg>
     );
   }
