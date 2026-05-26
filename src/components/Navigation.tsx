@@ -4,7 +4,7 @@ const navItems = [
   { name: "Projects",    path: "/projects",    count: "10" },
   { name: "Publication", path: "/publication", count: "—" },
   { name: "Members",     path: "/participants",count: "14" },
-  { name: "Courses",     path: "/courses",     count: "04" },
+  // { name: "Courses",     path: "/courses",     count: "04" }, // 익명화 후 선별 공개 예정
 ];
 
 export default function Navigation() {
