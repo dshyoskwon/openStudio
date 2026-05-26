@@ -5,7 +5,7 @@ const navItems = [
   { name: 'Projects', path: '/projects' },
   { name: 'Publication', path: '/publication' },
   { name: 'Members', path: '/participants' },
-  // { name: 'Courses', path: '/courses' }, // 익명화 후 선별 공개 예정
+  { name: 'Courses', path: '/courses' },
 ];
 
 export default function Navigation() {

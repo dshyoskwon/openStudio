@@ -86,41 +86,52 @@ export default function CoursesPage() {
       </header>
 
       <div className="grid gap-4">
-        {allCourses.map((course) => (
-          <Link
-            key={course.id}
-            href={course.href}
-            className="group flex items-center gap-5 border border-gray-200 rounded-sm px-5 py-4 hover:bg-gray-50 transition-colors"
-          >
-            {/* Icon */}
-            <div
-              className={`w-20 h-20 rounded-sm border flex items-center justify-center shrink-0 transition-colors ${getCourseStyle(course.id).bg} ${getCourseStyle(course.id).border}`}
+        {allCourses.map((course) => {
+          const clickable = course.id === "kmu-alpha";
+          const Wrapper = clickable ? Link : "div";
+          const wrapperProps = clickable
+            ? { href: course.href }
+            : {};
+          return (
+            <Wrapper
+              key={course.id}
+              {...(wrapperProps as any)}
+              className={`group flex items-center gap-5 border border-gray-200 rounded-sm px-5 py-4 transition-colors ${
+                clickable ? "hover:bg-gray-50 cursor-pointer" : "opacity-70"
+              }`}
             >
-              <CourseIcon id={course.id} />
-            </div>
+              {/* Icon */}
+              <div
+                className={`w-20 h-20 rounded-sm border flex items-center justify-center shrink-0 transition-colors ${getCourseStyle(course.id).bg} ${getCourseStyle(course.id).border}`}
+              >
+                <CourseIcon id={course.id} />
+              </div>
 
-            {/* Info */}
-            <div className="flex-1 min-w-0">
-              <h2 className="text-lg font-bold group-hover:underline">
-                {course.title}
-              </h2>
-              <p className="text-sm text-gray-500 mt-0.5 line-clamp-3 leading-snug">
-                {course.description}
-              </p>
-            </div>
+              {/* Info */}
+              <div className="flex-1 min-w-0">
+                <h2 className={`text-lg font-bold ${clickable ? "group-hover:underline" : ""}`}>
+                  {course.title}
+                </h2>
+                <p className="text-sm text-gray-500 mt-0.5 line-clamp-3 leading-snug">
+                  {course.description}
+                </p>
+              </div>
 
-            {/* Arrow */}
-            <svg
-              className="w-5 h-5 text-gray-400 group-hover:text-black transition-colors shrink-0"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M9 18l6-6-6-6" />
-            </svg>
-          </Link>
-        ))}
+              {/* Arrow — only for clickable */}
+              {clickable && (
+                <svg
+                  className="w-5 h-5 text-gray-400 group-hover:text-black transition-colors shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              )}
+            </Wrapper>
+          );
+        })}
       </div>
     </div>
   );
