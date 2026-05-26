@@ -103,6 +103,10 @@ export default function CoursesPage() {
         </h1>
       </header>
 
+      <p className="text-sm text-gray-500 leading-relaxed">
+        이 페이지는 국민대학교 공업디자인학과 권효선 교수의 수업에서 제작된 우수 과제를 소개합니다. 모든 작품의 저작권은 학생 본인에게 있으며, 무단 복제 및 도용을 금합니다.
+      </p>
+
       <div className="grid gap-4">
         {allCourses.map((course) => {
           const clickable = true;
