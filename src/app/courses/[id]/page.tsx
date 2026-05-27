@@ -101,8 +101,10 @@ export default async function CourseDetailPage({
   ) => {
     const allFolders = Object.keys(manifestProjects);
     const metaOrder = metaList.map((m) => m.folder);
-    const remaining = allFolders.filter((f) => !metaOrder.includes(f)).sort();
-    const folderNames = [...metaOrder.filter((f) => allFolders.includes(f)), ...remaining];
+    // 메타데이터가 있으면 지정된 프로젝트만 표시, 없으면 전체 표시
+    const folderNames = metaList.length > 0
+      ? metaOrder.filter((f) => allFolders.includes(f))
+      : allFolders.sort();
     return folderNames.map((folder) => {
       const meta = metaList.find((m) => m.folder === folder);
       const files = manifestProjects[folder];
