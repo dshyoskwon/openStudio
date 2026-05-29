@@ -109,7 +109,7 @@ export default function CoursesPage() {
 
       <div className="grid gap-4">
         {allCourses.map((course) => {
-          const clickable = true;
+          const clickable = course.id === "kmu-alpha";
           const Wrapper = clickable ? Link : "div";
           const wrapperProps = clickable
             ? { href: course.href }
