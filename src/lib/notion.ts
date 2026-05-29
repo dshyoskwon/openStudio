@@ -123,5 +123,11 @@ export async function fetchNewsFromNotion(): Promise<NewsItem[]> {
     });
   }
 
-  return mergeNews(items, fallbackNews);
+  // 코드에서 제외할 뉴스 항목
+  const excludeTitles = new Set([
+    "성재혁 교수님 (Co-PI) 공동 디렉터로 ORS합류",
+  ]);
+
+  const filtered = items.filter((n) => !excludeTitles.has(n.title));
+  return mergeNews(filtered, fallbackNews);
 }
