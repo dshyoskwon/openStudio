@@ -8,11 +8,6 @@ export type NewsItem = {
 // 이 파일만 수정하면 뉴스가 업데이트됩니다.
 export const newsItems: NewsItem[] = [
   {
-    date: "2025.12.31",
-    title: "Studio Website Opening",
-    category: "Notice",
-  },
-  {
     date: "2026.03.23",
     title: "Research Assistant Recruitment / 연구원 모집",
     category: "Recruit",
