@@ -22,7 +22,7 @@ const filters: { key: GroupFilter; label: string; dotClass: string; activeClass:
   },
   {
     key: "Graphics",
-    label: "Graphics",
+    label: "Visual Comm.",
     dotClass: "bg-emerald-600",
     activeClass: "border-emerald-200 bg-emerald-50 text-emerald-700",
     inactiveClass: "border-gray-200 bg-white text-gray-400 hover:bg-emerald-50/50",
