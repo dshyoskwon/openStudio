@@ -47,7 +47,7 @@ export default function ParticipantsPage() {
           <h2 className="text-sm font-bold uppercase tracking-wider text-gray-500 mb-6">
             Directors
           </h2>
-          <div className="grid grid-cols-1 gap-10">
+          <div className="grid grid-cols-2 gap-10">
             {/* Director — HCI */}
             {showHCI && (
               <div className="flex flex-col items-center md:items-start gap-4">
@@ -70,6 +70,32 @@ export default function ParticipantsPage() {
                   <p className="text-sm text-gray-500">hyosun.kwon@kookmin.ac.kr</p>
                   <p className="text-sm text-gray-700 leading-relaxed">
                     Human-Computer Interaction / Human-Centered Design / Creative Technology / Studio Practice
+                  </p>
+                </div>
+              </div>
+            )}
+            {/* Co-Director — Graphics */}
+            {showGraphics && (
+              <div className="flex flex-col items-center md:items-start gap-4">
+                <div className="relative w-32 h-32 rounded-full overflow-hidden bg-gray-200 flex-shrink-0 shadow-lg">
+                  <Image
+                    src="/images/participants/JHSung.jpg"
+                    alt="Portrait of Co-Director Jae-Hyouk Sung"
+                    fill
+                    sizes="128px"
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+                <div className="text-center md:text-left space-y-1">
+                  <div className="flex flex-col md:flex-row md:items-baseline md:gap-3">
+                    <h3 className="text-xl font-bold leading-tight">Jae-Hyouk Sung</h3>
+                    <span className="text-base font-light text-gray-600">(Professor)</span>
+                  </div>
+                  <p className="text-gray-600">Co-Principal Investigator</p>
+                  <p className="text-sm text-gray-500">email@kookmin.ac.kr</p>
+                  <p className="text-sm text-gray-700 leading-relaxed">
+                    Visual Communication / Graphic Design / Colour / Visual Media
                   </p>
                 </div>
               </div>
@@ -107,23 +133,6 @@ export default function ParticipantsPage() {
             Researchers
           </h2>
           <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-            {/* JH Sung — Graphics */}
-            {showGraphics && (
-              <div className="text-center md:text-left">
-                <div className="w-full aspect-square mb-3 rounded-lg overflow-hidden bg-gray-100 grayscale hover:grayscale-0 transition-all">
-                  <Image
-                    src="/images/participants/JHSung.jpg"
-                    alt="Portrait of JH Sung"
-                    width={400}
-                    height={400}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="font-bold">Jae-Hyouk Sung</h3>
-                <p className="text-xs text-gray-500">Co-PI / Professor</p>
-              </div>
-            )}
-
             {/* JY Lee — HCI */}
             {showHCI && (
               <div className="text-center md:text-left">
